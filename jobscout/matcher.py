@@ -110,8 +110,14 @@ def score_job(job: Job, profile: dict) -> dict:
     w = _weights(profile)
     title = _title_score(job, profile, w)
     skills, matched_skills = _skill_score(job, profile, w)
-    location = _location_score(job, profile, w)
-    industry = _industry_score(job, profile, w)
+
+    # Location/industry are bonuses on top of actual data-engineering
+    # relevance - a Business Analyst or DBA posting in Bengaluru shouldn't
+    # get credit for being in the right city if nothing else about it
+    # matches. Relevance = a title hit, or at least two overlapping skills.
+    is_relevant = title > 0 or len(matched_skills) >= 2
+    location = _location_score(job, profile, w) if is_relevant else 0.0
+    industry = _industry_score(job, profile, w) if is_relevant else 0.0
     penalty = _experience_penalty(job, profile, w)
 
     total = title + skills + location + industry - penalty
