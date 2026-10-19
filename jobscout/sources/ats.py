@@ -194,7 +194,11 @@ def fetch_oracle_hcm(entry: dict, *, max_results: int = 60,
 
     resp = _session(session).get(
         api_url,
-        params={"onlyData": "true", "finder": finder},
+        params={
+            "onlyData": "true",
+            "expand": "requisitionList.secondaryLocations",
+            "finder": finder,
+        },
         timeout=DEFAULT_TIMEOUT,
     )
     resp.raise_for_status()

@@ -60,6 +60,28 @@ def test_fetch_oracle_hcm(fake_session):
     assert "UberCareers" in jobs[0].url
 
 
+def test_fetch_oracle_hcm_requests_expand_param(fake_session):
+    # Regression test: Oracle's recruitingCEJobRequisitions endpoint silently
+    # omits "requisitionList" from every item unless the request carries
+    # expand=requisitionList.secondaryLocations - without it fetch_oracle_hcm
+    # used to return an empty list even when the tenant has open roles.
+    data = load_json_fixture("oracle_hcm_jobs.json")
+
+    class RecordingSession:
+        def __init__(self):
+            self.headers = {}
+            self.last_params = None
+
+        def get(self, url, **kwargs):
+            self.last_params = kwargs.get("params", {})
+            return FakeResponse(json_data=data)
+
+    session = RecordingSession()
+    ats.fetch_oracle_hcm({"host": "iaziqy.fa.ocs.oraclecloud.com", "site": "UberCareers"},
+                          session=session)
+    assert session.last_params["expand"] == "requisitionList.secondaryLocations"
+
+
 def test_fetch_successfactors(fake_session):
     html = load_fixture("successfactors_search.html")
     session = fake_session(FakeResponse(text=html))
