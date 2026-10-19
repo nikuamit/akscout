@@ -1,0 +1,44 @@
+[
+  {
+    "id": "a1b2c3d4-0000-0000-0000-000000000001",
+    "text": "Senior Data Engineer",
+    "categories": {
+      "commitment": "Full-time",
+      "department": "Engineering",
+      "location": "Remote - India",
+      "team": "Data Platform"
+    },
+    "createdAt": 1732000000000,
+    "hostedUrl": "https://jobs.lever.co/example/a1b2c3d4-senior-data-engineer",
+    "applyUrl": "https://jobs.lever.co/example/a1b2c3d4-senior-data-engineer/apply",
+    "description": "<p>We are looking for a Senior Data Engineer to build our Python and PySpark pipelines on AWS Glue and Redshift.</p>",
+    "descriptionPlain": "We are looking for a Senior Data Engineer to build our Python and PySpark pipelines on AWS Glue and Redshift.",
+    "lists": [
+      {
+        "text": "Requirements",
+        "content": "<ul><li>7+ years of data engineering experience</li><li>Strong SQL and Airflow</li></ul>"
+      }
+    ]
+  },
+  {
+    "id": "a1b2c3d4-0000-0000-0000-000000000002",
+    "text": "Frontend Engineer",
+    "categories": {
+      "commitment": "Full-time",
+      "department": "Engineering",
+      "location": "San Francisco, CA",
+      "team": "Web Platform"
+    },
+    "createdAt": 1732100000000,
+    "hostedUrl": "https://jobs.lever.co/example/a1b2c3d4-frontend-engineer",
+    "applyUrl": "https://jobs.lever.co/example/a1b2c3d4-frontend-engineer/apply",
+    "description": "<p>Build delightful user interfaces in React and TypeScript.</p>",
+    "descriptionPlain": "Build delightful user interfaces in React and TypeScript.",
+    "lists": [
+      {
+        "text": "Requirements",
+        "content": "<ul><li>3+ years of frontend experience</li><li>React, TypeScript, CSS</li></ul>"
+      }
+    ]
+  }
+]

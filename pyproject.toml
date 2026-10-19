@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jobscout"
+version = "0.1.0"
+description = "CLI job-search agent: scans ATS boards, scores matches against your profile, and drafts outreach"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = [
+    "requests>=2.31",
+    "pyyaml>=6.0",
+    "click>=8.1",
+    "rich>=13.0",
+    "beautifulsoup4>=4.12",
+]
+
+[project.optional-dependencies]
+resume = ["pypdf>=4.0"]
+ai = ["anthropic>=0.40"]
+all = ["jobscout[resume,ai]"]
+dev = ["pytest>=8.0", "pytest-mock>=3.14"]
+
+[project.scripts]
+jobscout = "jobscout.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["jobscout*"]

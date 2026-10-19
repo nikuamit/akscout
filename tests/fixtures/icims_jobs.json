@@ -1,0 +1,29 @@
+{
+  "totalCount": 2,
+  "jobs": [
+    {
+      "data": {
+        "id": "10045",
+        "slug": "senior-data-engineer-bengaluru-10045",
+        "title": "Senior Data Engineer",
+        "full_location": "Bengaluru, Karnataka, India",
+        "posted_date": "2026-10-10",
+        "employment_type": "Full-time",
+        "description": "Own our AWS Glue and Iceberg-based lakehouse, build Airflow pipelines feeding Redshift and Athena.",
+        "apply_url": "https://careers.example.icims.com/jobs/10045/senior-data-engineer/job"
+      }
+    },
+    {
+      "data": {
+        "id": "10046",
+        "slug": "warehouse-associate-10046",
+        "title": "Warehouse Associate",
+        "full_location": "Memphis, TN, United States",
+        "posted_date": "2026-10-09",
+        "employment_type": "Full-time",
+        "description": "Pick, pack, and ship orders in our distribution center.",
+        "apply_url": "https://careers.example.icims.com/jobs/10046/warehouse-associate/job"
+      }
+    }
+  ]
+}
