@@ -1,0 +1,160 @@
+name: Amit Kumar Sahu
+title: Senior Data Engineer
+location: Bengaluru, India
+years_experience: 9
+remote_ok: true
+email: nikuamit.sahu256@gmail.com
+
+target_titles:
+  - data engineer
+
+skills:
+  - python
+  - pyspark
+  - sql
+  - aws glue
+  - aws dms
+  - redshift
+  - athena
+  - kinesis
+  - lake formation
+  - airflow
+  - apache iceberg
+  - iceberg
+  - cube cloud
+  - row-level security
+  - multi-tenant
+
+locations:
+  - bengaluru
+  - bangalore
+  - india
+  - remote
+
+industries:
+  - pharma
+  - pharmaceutical
+  - saas
+  - fintech
+  - data platform
+
+# Hand-tuned scoring weights - see jobscout/matcher.py for how these combine.
+# Keep these stable across profile merges; only change deliberately.
+weights:
+  title: 40
+  skills: 25
+  location: 20
+  industry: 15
+  per_skill_points: 5
+  seniority_bonus: 5
+  experience_grace_years: 2
+  experience_penalty_per_year: 8
+  experience_penalty_max: 40
+
+watchlist:
+  # -- fintech / payments --
+  - name: Stripe
+    ats: greenhouse
+    board: stripe
+  - name: Razorpay
+    ats: greenhouse
+    board: razorpaysoftwareprivatelimited
+  - name: Brex
+    ats: greenhouse
+    board: brex
+  - name: Affirm
+    ats: greenhouse
+    board: affirm
+  - name: Robinhood
+    ats: greenhouse
+    board: robinhood
+  - name: Coinbase
+    ats: greenhouse
+    board: coinbase
+  - name: Visa
+    ats: workday
+    host: visa.wd5.myworkdayjobs.com
+    tenant: visa
+    site: Visa
+  - name: CRED
+    ats: lever
+    board: cred
+
+  # -- SaaS / data platform / infra --
+  - name: Databricks
+    ats: greenhouse
+    board: databricks
+  - name: Scale AI
+    ats: greenhouse
+    board: scaleai
+  - name: Grafana Labs
+    ats: greenhouse
+    board: grafanalabs
+  - name: Elastic
+    ats: greenhouse
+    board: elastic
+  - name: Cloudflare
+    ats: greenhouse
+    board: cloudflare
+  - name: MongoDB
+    ats: greenhouse
+    board: mongodb
+  - name: GitLab
+    ats: greenhouse
+    board: gitlab
+  - name: Flexport
+    ats: greenhouse
+    board: flexport
+  - name: Samsara
+    ats: greenhouse
+    board: samsara
+  - name: Gusto
+    ats: greenhouse
+    board: gusto
+  - name: Pinterest
+    ats: greenhouse
+    board: pinterest
+
+  # -- pharma / life sciences --
+  - name: MSD
+    ats: workday
+    host: msd.wd5.myworkdayjobs.com
+    tenant: msd
+    site: SearchJobs
+  - name: Takeda
+    ats: workday
+    host: takeda.wd502.myworkdayjobs.com
+    tenant: takeda
+    site: External
+  - name: Novartis
+    ats: workday
+    host: novartis.wd3.myworkdayjobs.com
+    tenant: novartis
+    site: Novartis_Careers
+  - name: Pfizer
+    ats: workday
+    host: pfizer.wd1.myworkdayjobs.com
+    tenant: pfizer
+    site: PfizerCareers
+  - name: AstraZeneca
+    ats: workday
+    host: astrazeneca.wd3.myworkdayjobs.com
+    tenant: astrazeneca
+    site: Careers
+  - name: Eli Lilly
+    ats: workday
+    host: lilly.wd115.myworkdayjobs.com
+    tenant: lilly
+    site: CMP
+
+  # -- big tech / global tech --
+  - name: Walmart Global Tech
+    ats: workday
+    host: walmart.wd504.myworkdayjobs.com
+    tenant: walmart
+    site: WalmartExternal
+  - name: Uber
+    ats: oracle_hcm
+    host: iaziqy.fa.ocs.oraclecloud.com
+    site: UberCareers
+    site_number: CX_1
