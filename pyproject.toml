@@ -21,7 +21,8 @@ dependencies = [
 resume = ["pypdf>=4.0"]
 ai = ["anthropic>=0.40"]
 gmail = ["google-api-python-client>=2.100", "google-auth-oauthlib>=1.2", "google-auth-httplib2>=0.2"]
-all = ["akscout[resume,ai,gmail]"]
+dashboard = ["streamlit>=1.38"]
+all = ["akscout[resume,ai,gmail,dashboard]"]
 dev = [
     "pytest>=8.0",
     "pytest-mock>=3.14",

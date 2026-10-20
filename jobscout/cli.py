@@ -356,5 +356,21 @@ def daily(profile_path, threshold, top, outreach_dir, gmail_draft, gmail_to, see
                   f"saved to {outreach_dir}/[/green]")
 
 
+@main.command()
+def dashboard():
+    """Launch the local Streamlit dashboard (Hiring Now/Pipeline/Metrics/
+    Insights/Follow-ups). Needs the 'dashboard' extra:
+    pip install 'jobscout[dashboard]'."""
+    import shutil
+    import subprocess
+
+    if shutil.which("streamlit") is None:
+        raise click.ClickException(
+            "Streamlit isn't installed. Install it with: pip install 'jobscout[dashboard]'"
+        )
+    dashboard_path = Path(__file__).parent / "dashboard.py"
+    subprocess.run(["streamlit", "run", str(dashboard_path)], check=False)
+
+
 if __name__ == "__main__":
     main()
