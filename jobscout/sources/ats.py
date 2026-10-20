@@ -10,19 +10,22 @@ ready-to-use watchlist entry.
 from __future__ import annotations
 
 import re
+import time
 from typing import Callable, Optional
 from urllib.parse import urlparse, parse_qs
 
 import requests
 
 from jobscout.models import Job
-from jobscout.utils import strip_html
+from jobscout.utils import MAX_DESCRIPTION_LENGTH, strip_html
 
 USER_AGENT = (
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
     "(KHTML, like Gecko) Chrome/120.0 Safari/537.36 jobscout/0.1"
 )
 DEFAULT_TIMEOUT = 15
+MAX_RETRIES = 3
+RETRYABLE_STATUS_CODES = {429, 500, 502, 503, 504}
 
 
 class AdapterError(RuntimeError):
@@ -36,6 +39,31 @@ def _session(session: Optional[requests.Session]) -> requests.Session:
     return s
 
 
+def _request(session: requests.Session, method: str, url: str, **kwargs) -> requests.Response:
+    """requests.Session.get/post, but retries 429/5xx with backoff.
+
+    429 responses respect a numeric ``Retry-After`` header if present;
+    everything else (and 429 without that header) backs off as
+    0.5s, 1s, 2s. Connection-level errors (timeouts, DNS failures, resets)
+    are NOT retried here - they propagate immediately so the caller (one
+    watchlist entry at a time in cli.py) can skip just that one company.
+    """
+    last_response = None
+    for attempt in range(MAX_RETRIES + 1):
+        resp = session.request(method, url, **kwargs)
+        if resp.status_code not in RETRYABLE_STATUS_CODES:
+            return resp
+        last_response = resp
+        if attempt == MAX_RETRIES:
+            break
+        if resp.status_code == 429 and resp.headers.get("Retry-After", "").isdigit():
+            delay = float(resp.headers["Retry-After"])
+        else:
+            delay = 0.5 * (2 ** attempt)
+        time.sleep(delay)
+    return last_response
+
+
 # --------------------------------------------------------------------------
 # Greenhouse
 # --------------------------------------------------------------------------
@@ -45,14 +73,15 @@ def fetch_greenhouse(entry: dict, *, max_results: int = 60,
     board = entry["board"]
     company = entry.get("name", board)
     url = f"https://boards-api.greenhouse.io/v1/boards/{board}/jobs"
-    resp = _session(session).get(url, params={"content": "true"}, timeout=DEFAULT_TIMEOUT)
-    if resp.status_code == 404:
-        raise AdapterError(f"Greenhouse board '{board}' not found (404)")
+    sess = _session(session)
+    resp = _request(sess, "GET", url, params={"content": "true"}, timeout=DEFAULT_TIMEOUT)
+    if resp.status_code in (404, 410):
+        raise AdapterError(f"Greenhouse board '{board}' not found ({resp.status_code})")
     resp.raise_for_status()
     try:
         data = resp.json()
         raw_jobs = data["jobs"]
-    except (ValueError, KeyError) as exc:
+    except (ValueError, KeyError, TypeError) as exc:
         raise AdapterError(f"Unexpected Greenhouse response shape: {exc}") from exc
 
     # The board API returns every open job in one response regardless of
@@ -61,17 +90,22 @@ def fetch_greenhouse(entry: dict, *, max_results: int = 60,
     # jobs (a 900-job board sorted alphabetically could cut off every
     # "Data Engineer" title, which starts well past position 60).
     jobs = []
+    seen_ids = set()
     for j in raw_jobs:
-        location = (j.get("location") or {}).get("name", "")
+        job_id = str(j.get("id") or "")
+        if not job_id or job_id in seen_ids:
+            continue
+        seen_ids.add(job_id)
+        location = (j.get("location") or {}).get("name") or ""
         jobs.append(Job(
-            id=str(j["id"]),
-            title=j.get("title", ""),
+            id=job_id,
+            title=j.get("title") or "",
             company=company,
             location=location,
-            url=j.get("absolute_url", ""),
+            url=j.get("absolute_url") or "",
             source="greenhouse",
             posted_at=j.get("first_published") or j.get("updated_at"),
-            description=strip_html(j.get("content", "")),
+            description=strip_html(j.get("content") or ""),
         ))
     return jobs
 
@@ -85,35 +119,41 @@ def fetch_lever(entry: dict, *, max_results: int = 60,
     board = entry["board"]
     company = entry.get("name", board)
     url = f"https://api.lever.co/v0/postings/{board}"
-    resp = _session(session).get(url, params={"mode": "json"}, timeout=DEFAULT_TIMEOUT)
-    if resp.status_code == 404:
-        raise AdapterError(f"Lever board '{board}' not found (404)")
+    sess = _session(session)
+    resp = _request(sess, "GET", url, params={"mode": "json"}, timeout=DEFAULT_TIMEOUT)
+    if resp.status_code in (404, 410):
+        raise AdapterError(f"Lever board '{board}' not found ({resp.status_code})")
     resp.raise_for_status()
     try:
         raw_jobs = resp.json()
-        if not isinstance(raw_jobs, list):
-            raise AdapterError(f"Unexpected Lever response shape: {raw_jobs!r}")
     except ValueError as exc:
         raise AdapterError(f"Unexpected Lever response shape: {exc}") from exc
+    if not isinstance(raw_jobs, list):
+        raise AdapterError(f"Unexpected Lever response shape: {raw_jobs!r}")
 
     # Same as Greenhouse: one response has every posting already, so there's
     # nothing to gain by truncating and real jobs to lose.
     jobs = []
+    seen_ids = set()
     for j in raw_jobs:
+        job_id = str(j.get("id") or "")
+        if not job_id or job_id in seen_ids:
+            continue
+        seen_ids.add(job_id)
         categories = j.get("categories") or {}
-        location = categories.get("location", "")
-        description_parts = [j.get("descriptionPlain") or strip_html(j.get("description", ""))]
+        location = categories.get("location") or ""
+        description_parts = [j.get("descriptionPlain") or strip_html(j.get("description") or "")]
         for lst in j.get("lists") or []:
-            description_parts.append(strip_html(lst.get("content", "")))
+            description_parts.append(strip_html(lst.get("content") or ""))
         jobs.append(Job(
-            id=str(j.get("id", "")),
-            title=j.get("text", ""),
+            id=job_id,
+            title=j.get("text") or "",
             company=company,
             location=location,
-            url=j.get("hostedUrl", ""),
+            url=j.get("hostedUrl") or "",
             source="lever",
-            posted_at=str(j.get("createdAt", "")) or None,
-            description=" ".join(p for p in description_parts if p),
+            posted_at=str(j.get("createdAt") or "") or None,
+            description=" ".join(p for p in description_parts if p)[:MAX_DESCRIPTION_LENGTH],
         ))
     return jobs
 
@@ -132,6 +172,7 @@ def fetch_workday(entry: dict, *, max_results: int = 60,
     api_url = f"https://{host}/wday/cxs/{tenant}/{site}/jobs"
 
     jobs: list[Job] = []
+    seen_ids = set()
     offset = 0
     page_size = 20
     total = None  # captured from the first page only - see note below
@@ -143,7 +184,7 @@ def fetch_workday(entry: dict, *, max_results: int = 60,
             "offset": offset,
             "searchText": search_text,
         }
-        resp = sess.post(api_url, json=body, timeout=DEFAULT_TIMEOUT)
+        resp = _request(sess, "POST", api_url, json=body, timeout=DEFAULT_TIMEOUT)
         if resp.status_code == 404:
             raise AdapterError(f"Workday site '{tenant}/{site}' not found (404)")
         if resp.status_code == 422:
@@ -155,7 +196,7 @@ def fetch_workday(entry: dict, *, max_results: int = 60,
         try:
             data = resp.json()
             postings = data["jobPostings"]
-        except (ValueError, KeyError) as exc:
+        except (ValueError, KeyError, TypeError) as exc:
             raise AdapterError(f"Unexpected Workday response shape: {exc}") from exc
 
         if total is None:
@@ -163,17 +204,21 @@ def fetch_workday(entry: dict, *, max_results: int = 60,
             # later page reports 0, which would make `offset >= total`
             # trip immediately and cap every company at 2 pages (40 jobs)
             # regardless of how many postings actually exist.
-            total = data.get("total", 0)
+            total = data.get("total") or 0
 
         if not postings:
             break
         for p in postings:
-            external_path = p.get("externalPath", "")
+            external_path = p.get("externalPath") or ""
+            job_id = external_path or (p.get("title") or "")
+            if not job_id or job_id in seen_ids:
+                continue
+            seen_ids.add(job_id)
             jobs.append(Job(
-                id=external_path or p.get("title", ""),
-                title=p.get("title", ""),
+                id=job_id,
+                title=p.get("title") or "",
                 company=company,
-                location=p.get("locationsText", ""),
+                location=p.get("locationsText") or "",
                 url=f"https://{host}/en-US/{site}{external_path}",
                 source="workday",
                 posted_at=p.get("postedOn"),
@@ -207,8 +252,9 @@ def fetch_oracle_hcm(entry: dict, *, max_results: int = 60,
     if keyword:
         finder += f",keyword={keyword}"
 
-    resp = _session(session).get(
-        api_url,
+    sess = _session(session)
+    resp = _request(
+        sess, "GET", api_url,
         params={
             "onlyData": "true",
             "expand": "requisitionList.secondaryLocations",
@@ -220,21 +266,26 @@ def fetch_oracle_hcm(entry: dict, *, max_results: int = 60,
     try:
         data = resp.json()
         item = data["items"][0]
-    except (ValueError, KeyError, IndexError) as exc:
+    except (ValueError, KeyError, IndexError, TypeError) as exc:
         raise AdapterError(f"Unexpected Oracle HCM response shape: {exc}") from exc
 
     reqs = item.get("requisitionList") or []
     jobs = []
+    seen_ids = set()
     for r in reqs[:max_results]:
+        job_id = str(r.get("Id") or "")
+        if not job_id or job_id in seen_ids:
+            continue
+        seen_ids.add(job_id)
         jobs.append(Job(
-            id=str(r.get("Id", "")),
-            title=r.get("Title", ""),
+            id=job_id,
+            title=r.get("Title") or "",
             company=company,
-            location=r.get("PrimaryLocation", ""),
-            url=f"https://{host}/hcmUI/CandidateExperience/en/sites/{site}/job/{r.get('Id', '')}",
+            location=r.get("PrimaryLocation") or "",
+            url=f"https://{host}/hcmUI/CandidateExperience/en/sites/{site}/job/{job_id}",
             source="oracle_hcm",
             posted_at=r.get("PostedDate"),
-            description=strip_html(r.get("ShortDescriptionStr", "")),
+            description=strip_html(r.get("ShortDescriptionStr") or ""),
         ))
     return jobs
 
@@ -267,14 +318,15 @@ def fetch_successfactors(entry: dict, *, max_results: int = 60,
     }
     if company_id:
         params["company"] = company_id
-    resp = sess.get(f"https://{host}/search/", params=params, timeout=DEFAULT_TIMEOUT)
+    resp = _request(sess, "GET", f"https://{host}/search/", params=params, timeout=DEFAULT_TIMEOUT)
     resp.raise_for_status()
     soup = BeautifulSoup(resp.text, "html.parser")
     links = soup.select("a.jobTitle-link")
 
     jobs: list[Job] = []
+    seen_ids = set()
     for a in links[:max_results]:
-        href = a.get("href", "")
+        href = a.get("href") or ""
         title = a.get_text(strip=True)
         row = a.find_parent("tr") or a.find_parent("div")
         location = ""
@@ -284,6 +336,9 @@ def fetch_successfactors(entry: dict, *, max_results: int = 60,
                 location = loc_el.get_text(strip=True)
         match = re.search(r"/job/[^/]+/(\d+)/?", href)
         job_id = match.group(1) if match else href
+        if not job_id or job_id in seen_ids:
+            continue
+        seen_ids.add(job_id)
         jobs.append(Job(
             id=job_id,
             title=title,
@@ -306,31 +361,36 @@ def fetch_smartrecruiters(entry: dict, *, max_results: int = 60,
     api_url = f"https://api.smartrecruiters.com/v1/companies/{company_id}/postings"
 
     jobs: list[Job] = []
+    seen_ids = set()
     offset = 0
     page_size = min(max_results, 100)
     sess = _session(session)
     while len(jobs) < max_results:
-        resp = sess.get(api_url, params={"limit": page_size, "offset": offset},
+        resp = _request(sess, "GET", api_url, params={"limit": page_size, "offset": offset},
                          timeout=DEFAULT_TIMEOUT)
-        if resp.status_code == 404:
-            raise AdapterError(f"SmartRecruiters company '{company_id}' not found (404)")
+        if resp.status_code in (404, 410):
+            raise AdapterError(f"SmartRecruiters company '{company_id}' not found ({resp.status_code})")
         resp.raise_for_status()
         try:
             data = resp.json()
             postings = data["content"]
-        except (ValueError, KeyError) as exc:
+        except (ValueError, KeyError, TypeError) as exc:
             raise AdapterError(f"Unexpected SmartRecruiters response shape: {exc}") from exc
 
         if not postings:
             break
         for p in postings:
-            location = (p.get("location") or {}).get("fullLocation", "")
+            job_id = str(p.get("id") or "")
+            if not job_id or job_id in seen_ids:
+                continue
+            seen_ids.add(job_id)
+            location = (p.get("location") or {}).get("fullLocation") or ""
             jobs.append(Job(
-                id=str(p.get("id", "")),
-                title=p.get("name", ""),
+                id=job_id,
+                title=p.get("name") or "",
                 company=company,
                 location=location,
-                url=f"https://jobs.smartrecruiters.com/{company_id}/{p.get('id', '')}",
+                url=f"https://jobs.smartrecruiters.com/{company_id}/{job_id}",
                 source="smartrecruiters",
                 posted_at=p.get("releasedDate"),
                 # The public list endpoint doesn't expose the job description
@@ -342,7 +402,7 @@ def fetch_smartrecruiters(entry: dict, *, max_results: int = 60,
             if len(jobs) >= max_results:
                 break
         offset += page_size
-        if offset >= data.get("totalFound", 0):
+        if offset >= (data.get("totalFound") or 0):
             break
     return jobs
 
@@ -358,6 +418,7 @@ def fetch_icims(entry: dict, *, max_results: int = 60,
     country = entry.get("country")
 
     jobs: list[Job] = []
+    seen_ids = set()
     page = 1
     page_size = min(max_results, 100)
     sess = _session(session)
@@ -370,35 +431,81 @@ def fetch_icims(entry: dict, *, max_results: int = 60,
         }
         if country:
             params["country"] = country
-        resp = sess.get(f"https://{host}/api/jobs", params=params, timeout=DEFAULT_TIMEOUT)
-        if resp.status_code == 404:
-            raise AdapterError(f"iCIMS career site '{host}' has no /api/jobs endpoint (404)")
+        resp = _request(sess, "GET", f"https://{host}/api/jobs", params=params, timeout=DEFAULT_TIMEOUT)
+        if resp.status_code in (404, 410):
+            raise AdapterError(f"iCIMS career site '{host}' has no /api/jobs endpoint ({resp.status_code})")
         resp.raise_for_status()
         try:
             data = resp.json()
             raw_jobs = data["jobs"]
-        except (ValueError, KeyError) as exc:
+        except (ValueError, KeyError, TypeError) as exc:
             raise AdapterError(f"Unexpected iCIMS response shape: {exc}") from exc
 
         if not raw_jobs:
             break
         for j in raw_jobs:
-            d = j.get("data", j)
+            d = j.get("data") or j
+            job_id = str(d.get("slug") or d.get("id") or "")
+            if not job_id or job_id in seen_ids:
+                continue
+            seen_ids.add(job_id)
             jobs.append(Job(
-                id=str(d.get("slug", d.get("id", ""))),
-                title=d.get("title", ""),
+                id=job_id,
+                title=d.get("title") or "",
                 company=company,
-                location=d.get("full_location", ""),
-                url=d.get("apply_url", f"https://{host}/jobs/{d.get('slug', '')}"),
+                location=d.get("full_location") or "",
+                url=d.get("apply_url") or f"https://{host}/jobs/{job_id}",
                 source="icims",
                 posted_at=d.get("posted_date"),
-                description=strip_html(d.get("description", "")),
+                description=strip_html(d.get("description") or ""),
             ))
             if len(jobs) >= max_results:
                 break
         page += 1
         if len(raw_jobs) < page_size:
             break
+    return jobs
+
+
+# --------------------------------------------------------------------------
+# Ashby - public, documented Job Board API, no auth needed.
+# --------------------------------------------------------------------------
+
+def fetch_ashby(entry: dict, *, max_results: int = 60,
+                 session: Optional[requests.Session] = None) -> list[Job]:
+    board = entry["board"]
+    company = entry.get("name", board)
+    url = f"https://api.ashbyhq.com/posting-api/job-board/{board}"
+    sess = _session(session)
+    resp = _request(sess, "GET", url, params={"includeCompensation": "false"},
+                     timeout=DEFAULT_TIMEOUT)
+    if resp.status_code in (404, 410):
+        raise AdapterError(f"Ashby board '{board}' not found ({resp.status_code})")
+    resp.raise_for_status()
+    try:
+        data = resp.json()
+        raw_jobs = data["jobs"]
+    except (ValueError, KeyError, TypeError) as exc:
+        raise AdapterError(f"Unexpected Ashby response shape: {exc}") from exc
+
+    # Like Greenhouse/Lever, the whole board comes back in one response.
+    jobs = []
+    seen_ids = set()
+    for j in raw_jobs:
+        job_id = str(j.get("id") or "")
+        if not job_id or job_id in seen_ids:
+            continue
+        seen_ids.add(job_id)
+        jobs.append(Job(
+            id=job_id,
+            title=j.get("title") or "",
+            company=company,
+            location=j.get("location") or "",
+            url=j.get("jobUrl") or j.get("applyUrl") or "",
+            source="ashby",
+            posted_at=j.get("publishedAt"),
+            description=(j.get("descriptionPlain") or strip_html(j.get("descriptionHtml") or ""))[:MAX_DESCRIPTION_LENGTH],
+        ))
     return jobs
 
 
@@ -410,6 +517,7 @@ ADAPTERS: dict[str, Callable[..., list[Job]]] = {
     "successfactors": fetch_successfactors,
     "icims": fetch_icims,
     "smartrecruiters": fetch_smartrecruiters,
+    "ashby": fetch_ashby,
 }
 
 
@@ -426,16 +534,25 @@ def fetch_jobs(entry: dict, *, max_results: int = 60,
 # detect: turn a pasted careers-page / job-board URL into a watchlist entry
 # --------------------------------------------------------------------------
 
-def detect_ats(url: str) -> Optional[dict]:
-    """Best-effort detection of ATS type + config from a URL the user pastes.
-
-    Returns a dict with an ``"ats"`` key and whatever fields that adapter
-    needs, or ``None`` if the URL doesn't match a known ATS pattern.
+def _detect_ats_from_url(url: str) -> Optional[dict]:
+    """Pure string-based heuristic - no network. Tracking params, trailing
+    slashes, http/https and www all fall out naturally since only host and
+    path are inspected.
     """
     parsed = urlparse(url if "://" in url else f"https://{url}")
     host = parsed.netloc
     path = parsed.path
     qs = parse_qs(parsed.query)
+
+    if "ashbyhq.com" in host:
+        parts = [p for p in path.split("/") if p]
+        if "job-board" in parts:
+            idx = parts.index("job-board")
+            if idx + 1 < len(parts):
+                return {"ats": "ashby", "board": parts[idx + 1]}
+        if parts:
+            return {"ats": "ashby", "board": parts[0]}
+        return None
 
     if "greenhouse.io" in host:
         # boards.greenhouse.io/<slug>, job-boards.greenhouse.io/<slug>,
@@ -499,3 +616,30 @@ def detect_ats(url: str) -> Optional[dict]:
         return None
 
     return None
+
+
+def detect_ats(url: str, *, session: Optional[requests.Session] = None) -> Optional[dict]:
+    """Best-effort detection of ATS type + config from a URL the user pastes.
+
+    Returns a dict with an ``"ats"`` key and whatever fields that adapter
+    needs, or ``None`` if the URL doesn't match a known ATS pattern.
+
+    Tries the URL as given first (no network). If that doesn't match - e.g.
+    a company's own custom careers domain that redirects to Greenhouse/Lever/
+    etc. - follows redirects and retries the heuristic against the final
+    URL. Any network failure here just falls through to ``None``, same as
+    an unrecognized ATS.
+    """
+    direct = _detect_ats_from_url(url)
+    if direct is not None:
+        return direct
+
+    try:
+        sess = _session(session)
+        resp = sess.get(url if "://" in url else f"https://{url}",
+                         timeout=DEFAULT_TIMEOUT, allow_redirects=True)
+    except requests.RequestException:
+        return None
+    if resp.url == url:
+        return None
+    return _detect_ats_from_url(resp.url)

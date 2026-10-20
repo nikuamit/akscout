@@ -21,7 +21,13 @@ dependencies = [
 resume = ["pypdf>=4.0"]
 ai = ["anthropic>=0.40"]
 all = ["akscout[resume,ai]"]
-dev = ["pytest>=8.0", "pytest-mock>=3.14"]
+dev = [
+    "pytest>=8.0",
+    "pytest-mock>=3.14",
+    "responses>=0.25",
+    "freezegun>=1.5",
+    "hypothesis>=6.100",
+]
 
 [project.scripts]
 jobscout = "jobscout.cli:main"

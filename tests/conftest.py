@@ -16,10 +16,12 @@ def load_json_fixture(name: str):
 
 
 class FakeResponse:
-    def __init__(self, *, json_data=None, text="", status_code=200):
+    def __init__(self, *, json_data=None, text="", status_code=200, headers=None, url=None):
         self._json_data = json_data
         self.text = text
         self.status_code = status_code
+        self.headers = headers or {}
+        self.url = url or ""
 
     def json(self):
         if self._json_data is None:
@@ -43,6 +45,9 @@ class FakeSession:
 
     def post(self, url, **kwargs):
         return self._response
+
+    def request(self, method, url, **kwargs):
+        return getattr(self, method.lower())(url, **kwargs)
 
 
 @pytest.fixture

@@ -55,12 +55,12 @@ def test_fetch_workday_paginates_past_the_first_two_pages(fake_session):
     # first page - every later page reports total=0 (confirmed live on
     # Novartis), which used to make the loop stop after exactly 2 pages
     # (40 jobs) no matter how many postings actually existed.
-    def make_page(n, total):
+    def make_page(start, n, total):
         return {
             "total": total,
             "jobPostings": [
                 {"title": f"Job {i}", "externalPath": f"/job/{i}", "locationsText": "Remote"}
-                for i in range(n)
+                for i in range(start, start + n)
             ],
         }
 
@@ -68,9 +68,9 @@ def test_fetch_workday_paginates_past_the_first_two_pages(fake_session):
         def __init__(self):
             self.headers = {}
             self.responses = [
-                FakeResponse(json_data=make_page(20, 45)),   # page 1: real total
-                FakeResponse(json_data=make_page(20, 0)),     # page 2: total resets to 0
-                FakeResponse(json_data=make_page(5, 0)),      # page 3: last partial page
+                FakeResponse(json_data=make_page(0, 20, 45)),    # page 1: real total
+                FakeResponse(json_data=make_page(20, 20, 0)),    # page 2: total resets to 0
+                FakeResponse(json_data=make_page(40, 5, 0)),     # page 3: last partial page
             ]
             self.calls = 0
 
@@ -78,6 +78,9 @@ def test_fetch_workday_paginates_past_the_first_two_pages(fake_session):
             resp = self.responses[min(self.calls, len(self.responses) - 1)]
             self.calls += 1
             return resp
+
+        def request(self, method, url, **kwargs):
+            return getattr(self, method.lower())(url, **kwargs)
 
     session = PagingSession()
     entry = {"host": "acme.wd1.myworkdayjobs.com", "tenant": "acme", "site": "External",
@@ -112,6 +115,9 @@ def test_fetch_oracle_hcm_requests_expand_param(fake_session):
         def get(self, url, **kwargs):
             self.last_params = kwargs.get("params", {})
             return FakeResponse(json_data=data)
+
+        def request(self, method, url, **kwargs):
+            return getattr(self, method.lower())(url, **kwargs)
 
     session = RecordingSession()
     ats.fetch_oracle_hcm({"host": "iaziqy.fa.ocs.oraclecloud.com", "site": "UberCareers"},
