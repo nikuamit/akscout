@@ -1,6 +1,9 @@
 from __future__ import annotations
 
 import os
+import re
+from datetime import datetime, timezone
+from pathlib import Path
 
 import click
 import requests
@@ -8,6 +11,7 @@ import yaml
 from rich.console import Console
 from rich.table import Table
 
+from jobscout import tracker
 from jobscout.profile import load_profile, save_profile, find_watchlist_entry, ProfileError
 from jobscout.sources.ats import fetch_jobs, detect_ats, AdapterError
 from jobscout.matcher import rank_jobs
@@ -121,7 +125,6 @@ def scan(profile_path, new_only, top, out_path, seen_path):
     ranked = rank_jobs(jobs, profile)[:top]
 
     report = render_markdown(ranked, title=f"JobScout report for {profile.get('name', '')}")
-    from pathlib import Path
     Path(out_path).parent.mkdir(parents=True, exist_ok=True)
     Path(out_path).write_text(report)
 
@@ -167,6 +170,190 @@ def outreach(job_url, profile_path):
         raise SystemExit(1)
 
     click.echo(email)
+
+
+# --------------------------------------------------------------------------
+# track: a local SQLite application pipeline (data/applications.db)
+# --------------------------------------------------------------------------
+
+DB_OPTION = click.option("--db", "db_path", default=tracker.DEFAULT_DB_PATH, show_default=True,
+                          type=click.Path())
+
+
+@main.group()
+def track():
+    """Manage your local application tracker (data/applications.db)."""
+
+
+@track.command("add")
+@click.argument("job_url")
+@click.option("--title", default="(unknown title)", show_default=True)
+@click.option("--company", default="(unknown company)", show_default=True)
+@click.option("--source", default="manual", show_default=True)
+@click.option("--score", type=int, default=None)
+@click.option("--stage", default="shortlisted", show_default=True,
+              type=click.Choice(tracker.STAGES))
+@DB_OPTION
+def track_add(job_url, title, company, source, score, stage, db_path):
+    """Add a job to the tracker by URL (title/company default to placeholders -
+    pass --title/--company, or add straight from `scan`/`daily` results)."""
+    from jobscout.models import Job
+    job = Job(id=job_url, title=title, company=company, location="", url=job_url, source=source)
+    conn = tracker.connect(db_path)
+    app_id = tracker.add_application(conn, job, score=score, stage=stage)
+    console.print(f"[green]#{app_id}[/green] {company} - {title} ({stage})")
+
+
+@track.command("update")
+@click.argument("app_id", type=int)
+@click.option("--stage", required=True, type=click.Choice(tracker.STAGES))
+@click.option("--note", default=None)
+@DB_OPTION
+def track_update(app_id, stage, note, db_path):
+    """Move an application to a new stage."""
+    conn = tracker.connect(db_path)
+    tracker.update_stage(conn, app_id, stage, note=note)
+    console.print(f"[green]#{app_id} -> {stage}[/green]")
+
+
+@track.command("contact")
+@click.argument("app_id", type=int)
+@click.option("--name", default=None)
+@click.option("--email", default=None)
+@click.option("--linkedin", default=None)
+@DB_OPTION
+def track_contact(app_id, name, email, linkedin, db_path):
+    """Record a TA/recruiter contact you've sourced yourself - this never
+    looks anyone up automatically."""
+    conn = tracker.connect(db_path)
+    tracker.set_contact(conn, app_id, name=name, email=email, linkedin=linkedin)
+    console.print(f"[green]Updated contact for #{app_id}[/green]")
+
+
+@track.command("reject")
+@click.argument("app_id", type=int)
+@click.argument("raw_reason")
+@DB_OPTION
+def track_reject(app_id, raw_reason, db_path):
+    """Record a rejection and classify the reason."""
+    conn = tracker.connect(db_path)
+    category = tracker.set_rejection(conn, app_id, raw_reason)
+    console.print(f"[green]#{app_id} rejected - classified as '{category}'[/green]")
+
+
+@track.command("sweep-ghosted")
+@click.option("--stale-days", default=21, show_default=True)
+@DB_OPTION
+def track_sweep(stale_days, db_path):
+    """Flip anything with no contact in --stale-days to 'ghosted'."""
+    conn = tracker.connect(db_path)
+    changed = tracker.mark_stale_as_ghosted(conn, stale_days=stale_days)
+    console.print(f"[green]Marked {len(changed)} stale application(s) as ghosted[/green]")
+    for row in changed:
+        console.print(f"  #{row['id']} {row['company']} - {row['title']}")
+
+
+@track.command("list")
+@click.option("--stage", default=None, type=click.Choice(tracker.STAGES))
+@DB_OPTION
+def track_list(stage, db_path):
+    """List tracked applications."""
+    conn = tracker.connect(db_path)
+    rows = tracker.list_applications(conn, stage=stage)
+    table = Table(title=f"Applications{f' ({stage})' if stage else ''}")
+    for col in ("ID", "Stage", "Score", "Company", "Title", "TA Contact", "Flag"):
+        table.add_column(col)
+    for r in rows:
+        flag = "NOT-REALLY-HIRING" if r["not_really_hiring"] else ""
+        table.add_row(str(r["id"]), r["stage"], str(r["score"] or ""), r["company"], r["title"],
+                      r["ta_name"] or "", flag)
+    console.print(table)
+
+
+@track.command("metrics")
+@DB_OPTION
+def track_metrics(db_path):
+    """Print pipeline metrics: response rate, interview conversion, stage counts."""
+    conn = tracker.connect(db_path)
+    console.print(yaml.safe_dump(tracker.metrics(conn), sort_keys=False))
+
+
+# --------------------------------------------------------------------------
+# daily: the one-command daily routine
+# --------------------------------------------------------------------------
+
+@main.command()
+@click.option("--profile", "profile_path", default="profiles/amit.yaml", show_default=True,
+              type=click.Path(exists=True))
+@click.option("--threshold", default=70, show_default=True,
+              help="Minimum score to shortlist.")
+@click.option("--top", default=5, show_default=True,
+              help="Max number of new matches to draft outreach for.")
+@click.option("--outreach-dir", default="outreach", show_default=True, type=click.Path())
+@click.option("--gmail-draft", is_flag=True,
+              help="Also save each outreach email as a Gmail draft (never sent). "
+                   "Needs the [gmail] extra and your own OAuth credentials.")
+@click.option("--to", "gmail_to", default=None,
+              help="Recipient address for --gmail-draft (required if that flag is set).")
+@click.option("--seen-path", default="data/seen.json", show_default=True, type=click.Path())
+@DB_OPTION
+def daily(profile_path, threshold, top, outreach_dir, gmail_draft, gmail_to, seen_path, db_path):
+    """Scan new postings, shortlist strong matches, flag evergreen reqs,
+    and draft outreach (saved locally - nothing is ever sent) for the best
+    new ones."""
+    profile = load_profile(profile_path)
+    jobs = _collect_jobs(profile)
+
+    seen = load_seen(seen_path)
+    new_jobs = [j for j in jobs if job_key(j) not in seen]
+    ranked = rank_jobs(new_jobs, profile)
+    shortlisted = [r for r in ranked if r["score"] >= threshold]
+
+    conn = tracker.connect(db_path)
+    for r in shortlisted:
+        job = r["job"]
+        app_id = tracker.add_application(conn, job, score=r["score"])
+        flag_str = " [yellow]NOT-REALLY-HIRING[/yellow]" if tracker.is_not_really_hiring(job) else ""
+        console.print(f"#{app_id} [bold]{r['score']}[/bold] {job.company} - {job.title}{flag_str}")
+
+    api_key = os.environ.get("ANTHROPIC_API_KEY")
+    drafted = 0
+    if not api_key:
+        err_console.print("[yellow]ANTHROPIC_API_KEY not set - skipping outreach drafts.[/yellow]")
+    else:
+        from jobscout.outreach import draft_email, OutreachError
+        Path(outreach_dir).mkdir(parents=True, exist_ok=True)
+        for r in shortlisted[:top]:
+            job = r["job"]
+            if tracker.is_not_really_hiring(job):
+                continue  # don't spend a draft on an evergreen/perpetual req
+            try:
+                email = draft_email(job.description or job.title, profile, api_key=api_key)
+            except OutreachError as exc:
+                err_console.print(f"[yellow]outreach draft failed for {job.company}: {exc}[/yellow]")
+                continue
+            safe_company = re.sub(r"[^a-zA-Z0-9]+", "-", job.company.strip()).strip("-").lower()
+            today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+            out_path = Path(outreach_dir) / f"{today}-{safe_company or 'company'}.txt"
+            out_path.write_text(email)
+            drafted += 1
+
+            if gmail_draft:
+                if not gmail_to:
+                    err_console.print("[yellow]--gmail-draft needs --to <email>; "
+                                       "saved locally only.[/yellow]")
+                else:
+                    from jobscout.gmail_draft import create_draft, GmailDraftError
+                    try:
+                        create_draft(to=gmail_to, subject=f"Interested in {job.title} at {job.company}",
+                                     body=email)
+                    except GmailDraftError as exc:
+                        err_console.print(f"[yellow]Gmail draft failed, kept local file only: "
+                                           f"{exc}[/yellow]")
+
+    save_seen(seen | {job_key(j) for j in jobs}, seen_path)
+    console.print(f"[green]{len(shortlisted)} shortlisted, {drafted} outreach draft(s) "
+                  f"saved to {outreach_dir}/[/green]")
 
 
 if __name__ == "__main__":
