@@ -55,8 +55,13 @@ def fetch_greenhouse(entry: dict, *, max_results: int = 60,
     except (ValueError, KeyError) as exc:
         raise AdapterError(f"Unexpected Greenhouse response shape: {exc}") from exc
 
+    # The board API returns every open job in one response regardless of
+    # how many there are - there's no pagination to limit, so max_results
+    # doesn't apply here. Truncating client-side would just silently drop
+    # jobs (a 900-job board sorted alphabetically could cut off every
+    # "Data Engineer" title, which starts well past position 60).
     jobs = []
-    for j in raw_jobs[:max_results]:
+    for j in raw_jobs:
         location = (j.get("location") or {}).get("name", "")
         jobs.append(Job(
             id=str(j["id"]),
@@ -91,8 +96,10 @@ def fetch_lever(entry: dict, *, max_results: int = 60,
     except ValueError as exc:
         raise AdapterError(f"Unexpected Lever response shape: {exc}") from exc
 
+    # Same as Greenhouse: one response has every posting already, so there's
+    # nothing to gain by truncating and real jobs to lose.
     jobs = []
-    for j in raw_jobs[:max_results]:
+    for j in raw_jobs:
         categories = j.get("categories") or {}
         location = categories.get("location", "")
         description_parts = [j.get("descriptionPlain") or strip_html(j.get("description", ""))]
