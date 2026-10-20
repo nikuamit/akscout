@@ -3,6 +3,7 @@ from __future__ import annotations
 import os
 
 import click
+import requests
 import yaml
 from rich.console import Console
 from rich.table import Table
@@ -69,7 +70,7 @@ def org(name, profile_path, limit):
         raise SystemExit(1)
     try:
         jobs = fetch_jobs(entry)
-    except AdapterError as exc:
+    except (AdapterError, requests.RequestException) as exc:
         console.print(f"[red]FAILED ({entry.get('ats')}): {exc}[/red]")
         raise SystemExit(1)
 
@@ -83,7 +84,9 @@ def _collect_jobs(profile: dict) -> list:
     for entry in profile.get("watchlist", []):
         try:
             all_jobs.extend(fetch_jobs(entry))
-        except AdapterError as exc:
+        except (AdapterError, requests.RequestException) as exc:
+            # One company's site timing out, 500ing, or failing DNS
+            # shouldn't take down the whole scan - warn and keep going.
             err_console.print(f"[yellow]warning: {entry.get('name')}: {exc}[/yellow]")
     return all_jobs
 
