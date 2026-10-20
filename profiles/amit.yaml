@@ -79,6 +79,9 @@ watchlist:
   - name: CRED
     ats: lever
     board: cred
+  - name: Meesho
+    ats: lever
+    board: meesho
 
   # -- SaaS / data platform / infra --
   - name: Databricks
@@ -102,6 +105,9 @@ watchlist:
   - name: GitLab
     ats: greenhouse
     board: gitlab
+  - name: Freshworks
+    ats: smartrecruiters
+    company: Freshworks
   - name: Flexport
     ats: greenhouse
     board: flexport
