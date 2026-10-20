@@ -1,6 +1,8 @@
-# jobscout
+# AKScout
 
-A small CLI job-search agent. It scans company career pages across several
+A small CLI job-search agent (package name `akscout`, Python module/import
+path and original CLI command both still `jobscout` - either `jobscout` or
+`akscout` works on the command line after install). It scans company career pages across several
 Applicant Tracking Systems (ATS), scores the results against your profile,
 and can draft a tailored outreach email for a specific posting.
 

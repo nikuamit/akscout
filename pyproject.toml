@@ -3,9 +3,9 @@ requires = ["setuptools>=68", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "jobscout"
+name = "akscout"
 version = "0.1.0"
-description = "CLI job-search agent: scans ATS boards, scores matches against your profile, and drafts outreach"
+description = "AKScout - CLI job-search agent: scans ATS boards, scores matches against your profile, and drafts outreach"
 readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "MIT" }
@@ -20,11 +20,12 @@ dependencies = [
 [project.optional-dependencies]
 resume = ["pypdf>=4.0"]
 ai = ["anthropic>=0.40"]
-all = ["jobscout[resume,ai]"]
+all = ["akscout[resume,ai]"]
 dev = ["pytest>=8.0", "pytest-mock>=3.14"]
 
 [project.scripts]
 jobscout = "jobscout.cli:main"
+akscout = "jobscout.cli:main"
 
 [tool.setuptools.packages.find]
 include = ["jobscout*"]
