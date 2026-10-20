@@ -1,0 +1,20 @@
+{
+  "generated_at": "2026-10-20T23:53:24.839222+00:00",
+  "companies_watched": 29,
+  "ats_adapters_supported": [
+    "ashby",
+    "greenhouse",
+    "icims",
+    "lever",
+    "oracle_hcm",
+    "smartrecruiters",
+    "successfactors",
+    "workday"
+  ],
+  "tests_passing": 113,
+  "latest_commit": {
+    "sha": "552cd09",
+    "date": "2026-10-21T05:22:11+05:30"
+  },
+  "latest_release": null
+}

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>AKScout</title>
+<meta name="description" content="AKScout is an open-source CLI job-search agent: it scans ATS job boards, scores matches against your profile, tracks your pipeline, and drafts outreach." />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #0b0d12;
+    --panel: #12151c;
+    --border: #22262f;
+    --text: #e7e9ee;
+    --muted: #9aa3b2;
+    --accent: #6ee7b7;
+    --accent2: #7dd3fc;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Inter", system-ui, sans-serif;
+    line-height: 1.55;
+  }
+  a { color: var(--accent2); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  main {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 48px 20px 80px;
+  }
+  header { margin-bottom: 40px; }
+  h1 {
+    font-size: 2.4rem;
+    margin: 0 0 8px;
+    letter-spacing: -0.02em;
+  }
+  .tagline { color: var(--muted); font-size: 1.1rem; margin: 0 0 20px; }
+  .links a {
+    display: inline-block;
+    margin-right: 16px;
+    padding: 8px 14px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.85rem;
+  }
+  section { margin: 48px 0; }
+  h2 {
+    font-size: 1.3rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 8px;
+  }
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 14px;
+    margin-top: 16px;
+  }
+  .stat {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px;
+  }
+  .stat .value {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 1.6rem;
+    color: var(--accent);
+  }
+  .stat .label { color: var(--muted); font-size: 0.85rem; margin-top: 4px; }
+  #stats-fallback { color: var(--muted); font-size: 0.9rem; display: none; }
+  pre {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px;
+    overflow-x: auto;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.82rem;
+  }
+  ul.tech { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+  ul.tech li {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 6px 14px;
+    font-size: 0.85rem;
+    font-family: "JetBrains Mono", monospace;
+  }
+  svg text { fill: var(--text); font-family: "JetBrains Mono", monospace; font-size: 13px; }
+  svg .muted { fill: var(--muted); font-size: 11px; }
+  svg rect.box { fill: var(--panel); stroke: var(--border); stroke-width: 1.5; rx: 8; }
+  svg rect.accent { stroke: var(--accent); }
+  svg line, svg path.arrow { stroke: var(--muted); stroke-width: 1.5; fill: none; }
+  footer { color: var(--muted); font-size: 0.85rem; margin-top: 60px; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>AKScout</h1>
+    <p class="tagline">A job-search agent you run yourself. Scans ATS job boards, scores every posting against your profile, tracks the pipeline, and drafts outreach - all local, all open source.</p>
+    <div class="links">
+      <a href="https://github.com/nikuamit/akscout">GitHub repo</a>
+      <a href="https://github.com/nikuamit/akscout#readme">README</a>
+      <a href="https://github.com/nikuamit/akscout/releases">Releases</a>
+    </div>
+    <p class="muted" style="color:var(--muted); font-size:0.85rem;">
+      Built during a career break - a real tool I use for my own job search, not a demo.
+    </p>
+  </header>
+
+  <section>
+    <h2>Live project stats</h2>
+    <div class="stats-grid" id="stats-grid"></div>
+    <p id="stats-fallback">Live stats are temporarily unavailable - see
+      <a href="https://github.com/nikuamit/akscout">the repo</a> directly.</p>
+  </section>
+
+  <section>
+    <h2>How it works</h2>
+    <svg viewBox="0 0 880 260" width="100%" height="260" role="img"
+         aria-label="Architecture: watchlist profile feeds ATS adapters (Greenhouse, Lever, Workday, Oracle HCM, SmartRecruiters, iCIMS, SuccessFactors, Ashby), which feed the matcher, which feeds the tracker, outreach drafting, and the dashboard.">
+      <rect class="box" x="20" y="100" width="150" height="60" />
+      <text x="95" y="125" text-anchor="middle">profiles/*.yaml</text>
+      <text x="95" y="143" text-anchor="middle" class="muted">watchlist + skills</text>
+
+      <path class="arrow" d="M170,130 H230" marker-end="url(#arrow)" />
+
+      <rect class="box accent" x="230" y="20" width="190" height="220" />
+      <text x="325" y="42" text-anchor="middle" class="muted">ATS adapters</text>
+      <text x="325" y="68" text-anchor="middle">Greenhouse</text>
+      <text x="325" y="90" text-anchor="middle">Lever / Ashby</text>
+      <text x="325" y="112" text-anchor="middle">Workday</text>
+      <text x="325" y="134" text-anchor="middle">Oracle Cloud HCM</text>
+      <text x="325" y="156" text-anchor="middle">SmartRecruiters</text>
+      <text x="325" y="178" text-anchor="middle">iCIMS / SuccessFactors</text>
+      <text x="325" y="204" text-anchor="middle" class="muted">retry + backoff</text>
+
+      <path class="arrow" d="M420,130 H480" marker-end="url(#arrow)" />
+
+      <rect class="box" x="480" y="100" width="150" height="60" />
+      <text x="555" y="125" text-anchor="middle">matcher.py</text>
+      <text x="555" y="143" text-anchor="middle" class="muted">title/skills/location</text>
+
+      <path class="arrow" d="M630,130 H690" marker-end="url(#arrow)" />
+
+      <rect class="box" x="690" y="20" width="170" height="55" />
+      <text x="775" y="42" text-anchor="middle">tracker.py</text>
+      <text x="775" y="60" text-anchor="middle" class="muted">SQLite pipeline</text>
+
+      <rect class="box" x="690" y="90" width="170" height="55" />
+      <text x="775" y="112" text-anchor="middle">outreach.py</text>
+      <text x="775" y="130" text-anchor="middle" class="muted">Claude drafts</text>
+
+      <rect class="box" x="690" y="160" width="170" height="55" />
+      <text x="775" y="182" text-anchor="middle">dashboard.py</text>
+      <text x="775" y="200" text-anchor="middle" class="muted">Streamlit UI</text>
+
+      <path class="arrow" d="M690,47 H660 V128 H690" marker-end="url(#arrow)" />
+      <path class="arrow" d="M690,117 H660" marker-end="url(#arrow2)" />
+      <path class="arrow" d="M690,187 H660 V132" marker-end="url(#arrow3)" />
+
+      <defs>
+        <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+          <path d="M0,0 L8,4 L0,8 z" fill="#9aa3b2" />
+        </marker>
+        <marker id="arrow2" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+          <path d="M0,0 L8,4 L0,8 z" fill="#9aa3b2" />
+        </marker>
+        <marker id="arrow3" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+          <path d="M0,0 L8,4 L0,8 z" fill="#9aa3b2" />
+        </marker>
+      </defs>
+    </svg>
+  </section>
+
+  <section>
+    <h2>Tech stack</h2>
+    <ul class="tech">
+      <li>Python 3.10+</li><li>Click</li><li>Rich</li><li>requests</li>
+      <li>BeautifulSoup</li><li>SQLite</li><li>Streamlit</li>
+      <li>Anthropic Claude</li><li>pytest</li><li>hypothesis</li>
+      <li>responses</li><li>GitHub Actions</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Sample output</h2>
+    <p class="muted" style="color:var(--muted); font-size:0.85rem;">
+      A real captured run (not live) - see the README for how to run it yourself.
+    </p>
+    <pre>$ akscout scan --profile profiles/amit.yaml --top 5
+
+┏━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Score ┃ Title                ┃ Company             ┃ Location              ┃
+┡━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━┩
+│    65 │ SENIOR, DATA ENGINEER│ Walmart Global Tech │ IN KA BANGALORE       │
+│    65 │ Data Engineer, Sr.   │ Visa                │ IN - Bengaluru, India │
+│    45 │ Senior Specialist,   │ MSD                 │ Hyderabad             │
+│       │ Data Engineering     │                     │                       │
+└───────┴──────────────────────┴─────────────────────┴───────────────────────┘</pre>
+  </section>
+
+  <footer>
+    <p>AKScout - <a href="https://github.com/nikuamit/akscout">source on GitHub</a>. MIT licensed.</p>
+  </footer>
+</main>
+
+<script>
+(function () {
+  const grid = document.getElementById("stats-grid");
+  const fallback = document.getElementById("stats-fallback");
+
+  function statCard(value, label) {
+    const div = document.createElement("div");
+    div.className = "stat";
+    div.innerHTML = `<div class="value">${value}</div><div class="label">${label}</div>`;
+    return div;
+  }
+
+  fetch("data/public.json")
+    .then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then((stats) => {
+      grid.appendChild(statCard(stats.companies_watched, "companies watched"));
+      grid.appendChild(statCard(stats.ats_adapters_supported.length, "ATS adapters"));
+      grid.appendChild(statCard(stats.tests_passing, "tests passing"));
+      grid.appendChild(statCard(stats.latest_commit.sha, "latest commit"));
+      if (stats.latest_release) {
+        grid.appendChild(statCard(stats.latest_release.tag, "latest release"));
+      }
+    })
+    .catch(() => {
+      fallback.style.display = "block";
+    });
+})();
+</script>
+</body>
+</html>
