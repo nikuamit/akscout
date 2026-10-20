@@ -106,6 +106,16 @@ jobscout outreach "https://boards.greenhouse.io/databricks/jobs/1234" \
 
 All seven have fixture-based tests under `tests/fixtures/`.
 
+Greenhouse and Lever return a company's entire board in one response, so
+`jobscout scan` always processes every job from those two - there's nothing
+to paginate or gain by truncating. The paginated ATSs (Workday, Oracle HCM,
+SmartRecruiters, iCIMS) are capped at 200 jobs per company during a scan,
+because fully enumerating a large Workday tenant (800+ postings, ~40
+requests) risks a server-side read timeout. A watchlist entry for one of
+those can set `search_text` (e.g. `search_text: data`) to bias that capped
+window toward relevant titles via the ATS's own relevance ranking, instead
+of getting whatever order the API happens to return.
+
 ## Matching
 
 `jobscout/matcher.py` scores each job 0-100 from four additive components

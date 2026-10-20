@@ -79,11 +79,21 @@ def org(name, profile_path, limit):
         console.print(f"  - {j.title}  [dim]{j.location}[/dim]  {j.url}")
 
 
+# Greenhouse/Lever always return their full board in one response, so this
+# only actually limits the paginated ATSs (Workday, Oracle HCM,
+# SmartRecruiters, iCIMS). 200 is a deliberate balance: large Workday
+# tenants (800+ postings) will still miss some jobs past that window, but
+# live-testing showed fully enumerating one (Novartis, ~43 requests) is slow
+# enough to risk a server-side read timeout - see each entry's `search_text`
+# in profiles/amit.yaml for how relevant titles get surfaced within it.
+COLLECT_MAX_RESULTS = 200
+
+
 def _collect_jobs(profile: dict) -> list:
     all_jobs = []
     for entry in profile.get("watchlist", []):
         try:
-            all_jobs.extend(fetch_jobs(entry))
+            all_jobs.extend(fetch_jobs(entry, max_results=COLLECT_MAX_RESULTS))
         except (AdapterError, requests.RequestException) as exc:
             # One company's site timing out, 500ing, or failing DNS
             # shouldn't take down the whole scan - warn and keep going.
