@@ -102,6 +102,16 @@ def test_fetch_icims(fake_session):
     assert "Bengaluru" in jobs[0].location
 
 
+def test_fetch_smartrecruiters(fake_session):
+    data = load_json_fixture("smartrecruiters_jobs.json")
+    session = fake_session(FakeResponse(json_data=data))
+    entry = {"company": "Freshworks", "name": "Freshworks"}
+    jobs = ats.fetch_smartrecruiters(entry, session=session)
+    assert len(jobs) == 2
+    assert jobs[0].source == "smartrecruiters"
+    assert jobs[0].url == f"https://jobs.smartrecruiters.com/Freshworks/{jobs[0].id}"
+
+
 def test_fetch_jobs_dispatch(fake_session):
     data = load_json_fixture("greenhouse_jobs.json")
     session = fake_session(FakeResponse(json_data=data))
@@ -134,6 +144,10 @@ def test_fetch_jobs_unknown_ats():
     (
         "https://careers.example.icims.com/jobs/10045/senior-data-engineer/job",
         {"ats": "icims", "host": "careers.example.icims.com"},
+    ),
+    (
+        "https://jobs.smartrecruiters.com/Freshworks/744000156328949-lead",
+        {"ats": "smartrecruiters", "company": "Freshworks"},
     ),
 ])
 def test_detect_ats(url, expected):

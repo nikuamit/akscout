@@ -281,6 +281,58 @@ def fetch_successfactors(entry: dict, *, max_results: int = 60,
 
 
 # --------------------------------------------------------------------------
+# SmartRecruiters - public, documented Postings API, no auth needed.
+# --------------------------------------------------------------------------
+
+def fetch_smartrecruiters(entry: dict, *, max_results: int = 60,
+                           session: Optional[requests.Session] = None) -> list[Job]:
+    company_id = entry["company"]
+    company = entry.get("name", company_id)
+    api_url = f"https://api.smartrecruiters.com/v1/companies/{company_id}/postings"
+
+    jobs: list[Job] = []
+    offset = 0
+    page_size = min(max_results, 100)
+    sess = _session(session)
+    while len(jobs) < max_results:
+        resp = sess.get(api_url, params={"limit": page_size, "offset": offset},
+                         timeout=DEFAULT_TIMEOUT)
+        if resp.status_code == 404:
+            raise AdapterError(f"SmartRecruiters company '{company_id}' not found (404)")
+        resp.raise_for_status()
+        try:
+            data = resp.json()
+            postings = data["content"]
+        except (ValueError, KeyError) as exc:
+            raise AdapterError(f"Unexpected SmartRecruiters response shape: {exc}") from exc
+
+        if not postings:
+            break
+        for p in postings:
+            location = (p.get("location") or {}).get("fullLocation", "")
+            jobs.append(Job(
+                id=str(p.get("id", "")),
+                title=p.get("name", ""),
+                company=company,
+                location=location,
+                url=f"https://jobs.smartrecruiters.com/{company_id}/{p.get('id', '')}",
+                source="smartrecruiters",
+                posted_at=p.get("releasedDate"),
+                # The public list endpoint doesn't expose the job description
+                # text (only the per-posting detail endpoint does, which
+                # would mean one extra request per job) - title/location
+                # only for this ATS.
+                description="",
+            ))
+            if len(jobs) >= max_results:
+                break
+        offset += page_size
+        if offset >= data.get("totalFound", 0):
+            break
+    return jobs
+
+
+# --------------------------------------------------------------------------
 # iCIMS (Jibe-based career sites exposing a public /api/jobs endpoint)
 # --------------------------------------------------------------------------
 
@@ -342,6 +394,7 @@ ADAPTERS: dict[str, Callable[..., list[Job]]] = {
     "oracle_hcm": fetch_oracle_hcm,
     "successfactors": fetch_successfactors,
     "icims": fetch_icims,
+    "smartrecruiters": fetch_smartrecruiters,
 }
 
 
@@ -423,5 +476,11 @@ def detect_ats(url: str) -> Optional[dict]:
 
     if "icims.com" in host:
         return {"ats": "icims", "host": host}
+
+    if "smartrecruiters.com" in host:
+        parts = [p for p in path.split("/") if p]
+        if parts:
+            return {"ats": "smartrecruiters", "company": parts[0]}
+        return None
 
     return None

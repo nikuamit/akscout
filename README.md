@@ -102,8 +102,9 @@ jobscout outreach "https://boards.greenhouse.io/databricks/jobs/1234" \
 | `oracle_hcm` | `host`, `site`, `site_number` (default `CX_1`) | Oracle Fusion Cloud Recruiting's `recruitingCEJobRequisitions` REST endpoint. **Must** pass `expand=requisitionList.secondaryLocations` or the API silently omits every job - see `jobscout/sources/ats.py`. |
 | `successfactors` | `host`, `company_id` (optional) | No public JSON API, so this scrapes the server-rendered `/search/` page. Fetches one page. |
 | `icims` | `host`, `country` (optional) | Only works on iCIMS "Jibe" career sites that expose a public `/api/jobs` endpoint - many older iCIMS sites don't, since iCIMS has no self-service public API. |
+| `smartrecruiters` | `company` (the SmartRecruiters company identifier) | Public, documented Postings API. The list endpoint doesn't expose full job description text (only the per-posting detail endpoint does, at the cost of one request per job), so matching for this ATS runs on title/location only. |
 
-All six have fixture-based tests under `tests/fixtures/`.
+All seven have fixture-based tests under `tests/fixtures/`.
 
 ## Matching
 

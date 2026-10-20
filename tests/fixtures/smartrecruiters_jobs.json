@@ -1,0 +1,127 @@
+{
+  "offset": 0,
+  "limit": 2,
+  "totalFound": 2,
+  "content": [
+    {
+      "id": "744000156328949",
+      "name": "Lead - Program Management",
+      "uuid": "46658f4b-3128-41d0-8c3c-b6850c09ba9d",
+      "jobAdId": "277b81f6-7a7a-4daf-ab18-d25ad1cf966d",
+      "defaultJobAd": true,
+      "refNumber": "P102010_1",
+      "company": {
+        "identifier": "Freshworks",
+        "name": "Freshworks"
+      },
+      "releasedDate": "2026-10-19T13:47:37.168Z",
+      "location": {
+        "city": "San Mateo",
+        "country": "us",
+        "remote": false,
+        "hybrid": true,
+        "hybridDescription": "3x a week onsite Tue-Thur",
+        "fullLocation": "San Mateo, , United States"
+      },
+      "industry": {
+        "id": "it_and_services",
+        "label": "Information Technology And Services"
+      },
+      "department": {},
+      "function": {
+        "id": "other",
+        "label": "Other"
+      },
+      "typeOfEmployment": {
+        "id": "permanent",
+        "label": "Full-time"
+      },
+      "experienceLevel": {
+        "id": "mid_senior_level",
+        "label": "Mid-Senior Level"
+      },
+      "customField": [
+        {
+          "fieldId": "618bba30fa9dfa25d877c58b",
+          "fieldLabel": "Brands",
+          "valueId": "default",
+          "valueLabel": "Freshworks"
+        },
+        {
+          "fieldId": "COUNTRY",
+          "fieldLabel": "Country/Region",
+          "valueId": "us",
+          "valueLabel": "United States"
+        }
+      ],
+      "visibility": "PUBLIC",
+      "ref": "https://api.smartrecruiters.com/v1/companies/freshworks/postings/744000156328949",
+      "language": {
+        "code": "en",
+        "label": "English",
+        "labelNative": "English (US)"
+      }
+    },
+    {
+      "id": "744000156077279",
+      "name": "Senior Manager, Revenue Accounting",
+      "uuid": "b642b9bd-cc81-4f4c-9b9b-f3e2c5e92a35",
+      "jobAdId": "3850c1be-6377-4b9a-a0a0-751cabeff4ea",
+      "defaultJobAd": true,
+      "refNumber": "REF8776A",
+      "company": {
+        "identifier": "Freshworks",
+        "name": "Freshworks"
+      },
+      "releasedDate": "2026-10-16T20:30:55.811Z",
+      "location": {
+        "city": "San Mateo",
+        "region": "CA",
+        "country": "us",
+        "postalCode": "94403",
+        "remote": false,
+        "hybrid": true,
+        "hybridDescription": "Tu-Th In-Office M/F WFH",
+        "fullLocation": "San Mateo, CA, United States"
+      },
+      "industry": {
+        "id": "it_and_services",
+        "label": "Information Technology And Services"
+      },
+      "department": {},
+      "function": {
+        "id": "other",
+        "label": "Other"
+      },
+      "typeOfEmployment": {
+        "id": "permanent",
+        "label": "Full-time"
+      },
+      "experienceLevel": {
+        "id": "executive",
+        "label": "Executive"
+      },
+      "customField": [
+        {
+          "fieldId": "618bba30fa9dfa25d877c58b",
+          "fieldLabel": "Brands",
+          "valueId": "default",
+          "valueLabel": "Freshworks"
+        },
+        {
+          "fieldId": "COUNTRY",
+          "fieldLabel": "Country/Region",
+          "valueId": "us",
+          "valueLabel": "United States"
+        }
+      ],
+      "visibility": "PUBLIC",
+      "ref": "https://api.smartrecruiters.com/v1/companies/freshworks/postings/744000156077279",
+      "language": {
+        "code": "en",
+        "label": "English",
+        "labelNative": "English (US)"
+      }
+    }
+  ]
+}
