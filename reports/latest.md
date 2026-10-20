@@ -1,26 +1,26 @@
 # JobScout report for Amit Kumar Sahu
 
-_Generated 2026-10-19 23:18 UTC - 20 jobs_
+_Generated 2026-10-20 08:07 UTC - 20 jobs_
 
 | Score | Title | Company | Location | Link |
 |---|---|---|---|---|
-| 95 | Data Engineer | Samsara | Remote - Canada | [greenhouse](https://www.samsara.com/company/careers/roles/8250423?gh_jid=8250423) |
-| 95 | Data Engineer | Samsara | Remote - US | [greenhouse](https://www.samsara.com/company/careers/roles/8141959?gh_jid=8141959) |
-| 75 | Senior Data Engineer | Gusto | Denver, CO - Hybrid; New York, NY - Hybrid; San Francisco, CA - Hybrid | [greenhouse](https://job-boards.greenhouse.io/gusto/jobs/8099751) |
-| 55 | Data Engineer | Brex | San Francisco, California, United States | [greenhouse](https://www.brex.com/careers/8366850002?gh_jid=8366850002) |
-| 55 | Data Engineer | Brex | São Paulo, São Paulo, Brazil | [greenhouse](https://www.brex.com/careers/8523806002?gh_jid=8523806002) |
-| 45 | Lead Database Administrator | Razorpay | Bengaluru | [greenhouse](https://job-boards.greenhouse.io/razorpaysoftwareprivatelimited/jobs/4744101005) |
-| 45 | Analyst | Affirm | Remote US | [greenhouse](https://job-boards.greenhouse.io/affirm/jobs/7808667003) |
-| 45 | Analytics Engineer II | Affirm | Remote Poland | [greenhouse](https://job-boards.greenhouse.io/affirm/jobs/7764109003) |
-| 45 | Analytics Engineer II | Affirm | Remote Spain | [greenhouse](https://job-boards.greenhouse.io/affirm/jobs/8010489003) |
-| 45 | Analytics Lead, Full Stack (Strategic Revenue Insights) | Affirm | Remote US | [greenhouse](https://job-boards.greenhouse.io/affirm/jobs/7871456003) |
-| 45 | Analytics Lead, Full Stack (Strategic Revenue Insights) | Affirm | Remote Canada | [greenhouse](https://job-boards.greenhouse.io/affirm/jobs/7871458003) |
-| 45 | Manager, Fraud Operations | Affirm | Remote US | [greenhouse](https://job-boards.greenhouse.io/affirm/jobs/7821076003) |
-| 45 | Manager, Fraud Operations | Affirm | Remote Canada | [greenhouse](https://job-boards.greenhouse.io/affirm/jobs/7821078003) |
-| 45 | Marketing Analytics Director  - United States - Remote | Grafana Labs | United States (Remote) | [greenhouse](https://job-boards.greenhouse.io/grafanalabs/jobs/6107094004) |
-| 45 | Senior Backend Engineer - Databases Tempo - Canada - Remote | Grafana Labs | Canada (Remote) | [greenhouse](https://job-boards.greenhouse.io/grafanalabs/jobs/6223410004) |
-| 45 | Senior Backend Engineer - Databases Tempo - US - Remote | Grafana Labs | United States (Remote) | [greenhouse](https://job-boards.greenhouse.io/grafanalabs/jobs/6223411004) |
-| 45 | Application Engineer | MongoDB | Bengaluru | [greenhouse](https://www.mongodb.com/careers/job/?gh_jid=8143980) |
-| 45 | Senior Data Engineer | AstraZeneca | Spain - Barcelona | [workday](https://astrazeneca.wd3.myworkdayjobs.com/en-US/Careers/job/Spain---Barcelona/Senior-Data-Engineer_R-259660) |
-| 35 | Abuse Research Engineer | Stripe | Remote from the US | [greenhouse](https://stripe.com/jobs/search?gh_jid=8172503) |
-| 35 | Model Risk Management Lead, Machine Learning | Affirm | Remote Canada | [greenhouse](https://job-boards.greenhouse.io/affirm/jobs/7775355003) |
+| 85 | Lead Data Engineer | Elastic | United States | [greenhouse](https://jobs.elastic.co/jobs?gh_jid=8247144&gh_jid=8247144) |
+| 85 | Senior Data Engineer | Samsara | Remote - Canada | [greenhouse](https://www.samsara.com/company/careers/roles/8025794?gh_jid=8025794) |
+| 85 | Senior Data Engineer | Samsara | Remote - US | [greenhouse](https://www.samsara.com/company/careers/roles/7964565?gh_jid=7964565) |
+| 85 | Senior Data Engineer II | Samsara | Remote - US | [greenhouse](https://www.samsara.com/company/careers/roles/8039914?gh_jid=8039914) |
+| 75 | Staff Software Engineer, Risk Data Engineering | Stripe | Toronto | [greenhouse](https://stripe.com/jobs/search?gh_jid=8112043) |
+| 75 | Staff Software Engineer, Infrastructure Data Engineering    | Pinterest | New York, NY, US; Remote, US | [greenhouse](https://www.pinterestcareers.com/jobs/?gh_jid=8162539) |
+| 70 | Specialist Solutions Architect - Data Engineering & Warehousing (Financial Services)  | Databricks | United States | [greenhouse](https://databricks.com/company/careers/open-positions/job?gh_jid=8692962002) |
+| 70 | Senior Data Engineer | Cloudflare | In-Office | [greenhouse](https://boards.greenhouse.io/cloudflare/jobs/8055118?gh_jid=8055118) |
+| 65 | Sr. Technical Program Manager, Data Engineering | Pinterest | San Francisco, CA, US; Remote, US | [greenhouse](https://www.pinterestcareers.com/jobs/?gh_jid=8209014) |
+| 60 | Senior Software Engineer, Data Engineering | Robinhood | Menlo Park, CA | [greenhouse](https://boards.greenhouse.io/robinhood/jobs/4738660?t=gh_src=&gh_jid=4738660) |
+| 60 | Software Development Engineer III Data | Meesho | Bangalore, Karnataka | [lever](https://jobs.lever.co/meesho/7bb1de7e-8756-412b-8c71-0ba40863edc8) |
+| 60 | Sr. Product Manager, Data Engineering | Databricks | San Francisco, California | [greenhouse](https://databricks.com/company/careers/open-positions/job?gh_jid=6322654002) |
+| 55 | Senior Finance Specialist (Data & AI) | Databricks | Bengaluru, India | [greenhouse](https://databricks.com/company/careers/open-positions/job?gh_jid=8604579002) |
+| 55 | Senior Data Engineer, Public Sector | Scale AI | Washington, DC | [greenhouse](https://job-boards.greenhouse.io/scaleai/jobs/4713597005) |
+| 50 | Specialist Solutions Architect - Data Engineering | Databricks | Amsterdam, Netherlands | [greenhouse](https://databricks.com/company/careers/open-positions/job?gh_jid=8870159002) |
+| 47 | Finance Data and AI Lead | Databricks | Bengaluru, India | [greenhouse](https://databricks.com/company/careers/open-positions/job?gh_jid=8604598002) |
+| 45 | Data Science Manager, Risk | Stripe | Bengaluru | [greenhouse](https://stripe.com/jobs/search?gh_jid=7923653) |
+| 45 | F&S COE Manager | Stripe | Bengaluru | [greenhouse](https://stripe.com/jobs/search?gh_jid=8131132) |
+| 45 | Specialist Solutions Architect, Data | Stripe | SF, NY, Remote | [greenhouse](https://stripe.com/jobs/search?gh_jid=8144262) |
+| 45 | Data Analyst, Business Finance | Razorpay | Bengaluru | [greenhouse](https://job-boards.greenhouse.io/razorpaysoftwareprivatelimited/jobs/4744129005) |
