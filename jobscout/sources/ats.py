@@ -134,6 +134,7 @@ def fetch_workday(entry: dict, *, max_results: int = 60,
     jobs: list[Job] = []
     offset = 0
     page_size = 20
+    total = None  # captured from the first page only - see note below
     sess = _session(session)
     while len(jobs) < max_results:
         body = {
@@ -157,6 +158,13 @@ def fetch_workday(entry: dict, *, max_results: int = 60,
         except (ValueError, KeyError) as exc:
             raise AdapterError(f"Unexpected Workday response shape: {exc}") from exc
 
+        if total is None:
+            # Workday's `total` is only accurate on the first page - every
+            # later page reports 0, which would make `offset >= total`
+            # trip immediately and cap every company at 2 pages (40 jobs)
+            # regardless of how many postings actually exist.
+            total = data.get("total", 0)
+
         if not postings:
             break
         for p in postings:
@@ -174,7 +182,7 @@ def fetch_workday(entry: dict, *, max_results: int = 60,
             if len(jobs) >= max_results:
                 break
         offset += page_size
-        if offset >= data.get("total", 0):
+        if offset >= total:
             break
     return jobs
 

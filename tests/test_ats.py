@@ -50,6 +50,43 @@ def test_fetch_workday_422(fake_session):
         ats.fetch_workday(entry, session=session)
 
 
+def test_fetch_workday_paginates_past_the_first_two_pages(fake_session):
+    # Regression test: Workday's `total` field is only accurate on the
+    # first page - every later page reports total=0 (confirmed live on
+    # Novartis), which used to make the loop stop after exactly 2 pages
+    # (40 jobs) no matter how many postings actually existed.
+    def make_page(n, total):
+        return {
+            "total": total,
+            "jobPostings": [
+                {"title": f"Job {i}", "externalPath": f"/job/{i}", "locationsText": "Remote"}
+                for i in range(n)
+            ],
+        }
+
+    class PagingSession:
+        def __init__(self):
+            self.headers = {}
+            self.responses = [
+                FakeResponse(json_data=make_page(20, 45)),   # page 1: real total
+                FakeResponse(json_data=make_page(20, 0)),     # page 2: total resets to 0
+                FakeResponse(json_data=make_page(5, 0)),      # page 3: last partial page
+            ]
+            self.calls = 0
+
+        def post(self, url, **kwargs):
+            resp = self.responses[min(self.calls, len(self.responses) - 1)]
+            self.calls += 1
+            return resp
+
+    session = PagingSession()
+    entry = {"host": "acme.wd1.myworkdayjobs.com", "tenant": "acme", "site": "External",
+              "name": "Acme"}
+    jobs = ats.fetch_workday(entry, max_results=100, session=session)
+    assert len(jobs) == 45
+    assert session.calls == 3
+
+
 def test_fetch_oracle_hcm(fake_session):
     data = load_json_fixture("oracle_hcm_jobs.json")
     session = fake_session(FakeResponse(json_data=data))
