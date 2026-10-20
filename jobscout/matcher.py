@@ -36,6 +36,15 @@ JUNIOR_TERMS = {"junior", "jr", "intern", "entry level", "entry-level", "associa
 
 _YEARS_RE = re.compile(r"(\d{1,2})\s*\+?\s*(?:to|-)?\s*(\d{1,2})?\s*\+?\s*years", re.IGNORECASE)
 
+# "Remote" listings are often restricted to a specific country ("Remote -
+# Canada", "Remote US", "Remote Poland") rather than open globally. Without
+# this, a candidate outside that country looks like a perfect location
+# match when the role isn't actually reachable for them.
+_OTHER_COUNTRY_RE = re.compile(
+    r"\b(us|usa|united states|canada|uk|united kingdom|poland|spain|germany|"
+    r"france|brazil|mexico|australia|ireland|netherlands|singapore|japan|china)\b"
+)
+
 
 def _weights(profile: dict) -> dict:
     w = dict(DEFAULT_WEIGHTS)
@@ -70,10 +79,18 @@ def _skill_score(job: Job, profile: dict, w: dict) -> tuple[float, list[str]]:
 
 def _location_score(job: Job, profile: dict, w: dict) -> float:
     location = (job.location or "").lower()
-    target_locations = [l.lower() for l in profile.get("locations", [])]
-    if any(loc in location for loc in target_locations):
+    all_targets = [l.lower() for l in profile.get("locations", [])]
+    named_places = [l for l in all_targets if l != "remote"]
+
+    # An explicit place match (Bengaluru, India, ...) always counts, even if
+    # the listing also says "remote" in some other country-restricted sense.
+    if any(loc in location for loc in named_places):
         return w["location"]
-    if profile.get("remote_ok") and "remote" in location:
+
+    wants_remote = profile.get("remote_ok") or "remote" in all_targets
+    if wants_remote and "remote" in location:
+        if _OTHER_COUNTRY_RE.search(location):
+            return 0.0  # remote, but restricted to a country the candidate isn't in
         return w["location"]
     return 0.0
 

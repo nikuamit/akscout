@@ -82,6 +82,24 @@ def test_excessive_years_requirement_is_penalised():
     assert excessive_result["score"] <= reasonable_result["score"] - 20
 
 
+def test_country_restricted_remote_scores_lower_than_open_remote():
+    base = dict(
+        title="Data Engineer",
+        company="Acme",
+        description="Python, PySpark, SQL, AWS Glue, Redshift, Airflow pipelines.",
+        url="https://example.com/1", source="greenhouse", id="1",
+    )
+    open_remote = score_job(_job(location="Remote", **base), PROFILE)
+    canada_only = score_job(_job(location="Remote - Canada", **base), PROFILE)
+    us_only = score_job(_job(location="Remote US", **base), PROFILE)
+
+    assert open_remote["breakdown"]["location"] > 0
+    assert canada_only["breakdown"]["location"] == 0
+    assert us_only["breakdown"]["location"] == 0
+    assert open_remote["score"] > canada_only["score"]
+    assert open_remote["score"] > us_only["score"]
+
+
 def test_score_is_clamped_to_0_100():
     empty_job = _job(title="", company="", location="", description="")
     result = score_job(empty_job, PROFILE)
