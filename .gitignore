@@ -13,6 +13,9 @@ resume.pdf
 *.pdf
 .env
 profiles/me.yaml
+data/applications.db
+outreach/
+.hypothesis/
 
 # local report scratch (reports/latest.md is committed by CI)
 reports/*.local.md
