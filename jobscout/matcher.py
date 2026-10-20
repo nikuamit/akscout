@@ -32,7 +32,11 @@ DEFAULT_WEIGHTS = {
 }
 
 SENIOR_TERMS = {"senior", "sr", "lead", "staff", "principal", "iii", "iv"}
-JUNIOR_TERMS = {"junior", "jr", "intern", "entry level", "entry-level", "associate", "trainee"}
+JUNIOR_TERMS = {"junior", "jr", "intern", "entry level", "entry-level", "trainee"}
+# "Associate" is deliberately excluded: it's an entry-level prefix in tech
+# ("Associate Engineer") but a senior corporate-ladder rung in pharma/finance
+# ("Associate Director"), and penalising the latter would be wrong for a
+# pharma-heavy watchlist.
 
 _YEARS_RE = re.compile(r"(\d{1,2})\s*\+?\s*(?:to|-)?\s*(\d{1,2})?\s*\+?\s*years", re.IGNORECASE)
 

@@ -1,4 +1,4 @@
-from jobscout.matcher import score_job
+from jobscout.matcher import DEFAULT_WEIGHTS, score_job
 from jobscout.models import Job
 
 PROFILE = {
@@ -98,6 +98,30 @@ def test_country_restricted_remote_scores_lower_than_open_remote():
     assert us_only["breakdown"]["location"] == 0
     assert open_remote["score"] > canada_only["score"]
     assert open_remote["score"] > us_only["score"]
+
+
+def test_associate_director_in_pharma_is_not_treated_as_junior():
+    # "Associate" is an entry-level prefix in tech but a senior rung on the
+    # pharma/finance corporate ladder (seen live on real Novartis/AstraZeneca
+    # postings) - it must not trigger the junior-title penalty.
+    job = _job(
+        title="Associate Director, Data Engineering",
+        company="Big Pharma Co",
+        location="Bengaluru, India",
+        description="Lead data engineering using Python, SQL and Airflow. 8+ years required.",
+    )
+    with_bonus = score_job(job, PROFILE)
+
+    penalized = _job(
+        title="Junior Data Engineer",
+        company="Big Pharma Co",
+        location="Bengaluru, India",
+        description="Lead data engineering using Python, SQL and Airflow. 8+ years required.",
+    )
+    penalized_result = score_job(penalized, PROFILE)
+
+    assert with_bonus["breakdown"]["title"] >= DEFAULT_WEIGHTS["title"]
+    assert penalized_result["breakdown"]["title"] < with_bonus["breakdown"]["title"]
 
 
 def test_score_is_clamped_to_0_100():
