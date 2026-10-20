@@ -35,3 +35,9 @@ akscout = "jobscout.cli:main"
 
 [tool.setuptools.packages.find]
 include = ["jobscout*"]
+
+[tool.pytest.ini_options]
+markers = [
+    "live: hits real ATS APIs over the network - skipped by default, run with `pytest -m live`",
+]
+addopts = "-m 'not live'"
