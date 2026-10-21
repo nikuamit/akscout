@@ -1,26 +1,26 @@
 # JobScout report for Amit Kumar Sahu
 
-_Generated 2026-10-20 12:16 UTC - 20 jobs_
+_Generated 2026-10-21 08:14 UTC - 20 jobs_
 
 | Score | Title | Company | Location | Link |
 |---|---|---|---|---|
-| 65 | Data Engineer Sr. Consultant level | Visa | IN - Bengaluru, India | [workday](https://visa.wd5.myworkdayjobs.com/en-US/Visa/job/IN---Bengaluru-India/Data-Engineer-Sr-Consultant-level_REF089057W-1) |
-| 65 | SENIOR, DATA ENGINEER | Walmart Global Tech | IN KA BANGALORE Home Office Building 10 | [workday](https://walmart.wd504.myworkdayjobs.com/en-US/WalmartExternal/job/IN-KA-BANGALORE-Home-Office-Building-10/SENIOR--DATA-ENGINEER_R-2668776) |
-| 65 | Senior, Data Engineer | Walmart Global Tech | IN KA BANGALORE Home Office PTPP1 | [workday](https://walmart.wd504.myworkdayjobs.com/en-US/WalmartExternal/job/IN-KA-BANGALORE-Home-Office-PTPP1/Senior--Data-Engineer_R-2658477-1) |
-| 65 | Staff, Data Engineer | Walmart Global Tech | IN KA BANGALORE Home Office PTPP1 | [workday](https://walmart.wd504.myworkdayjobs.com/en-US/WalmartExternal/job/IN-KA-BANGALORE-Home-Office-PTPP1/Staff--Data-Engineer_R-2658426) |
-| 65 | Principal, Data Engineer | Walmart Global Tech | IN KA BANGALORE Home Office PTPP1 | [workday](https://walmart.wd504.myworkdayjobs.com/en-US/WalmartExternal/job/IN-KA-BANGALORE-Home-Office-PTPP1/Principal--Data-Engineer_R-2658375-1) |
-| 65 | STAFF, DATA ENGINEER | Walmart Global Tech | IN KA BANGALORE Home Office PTPP1 | [workday](https://walmart.wd504.myworkdayjobs.com/en-US/WalmartExternal/job/IN-KA-BANGALORE-Home-Office-PTPP1/STAFF--DATA-ENGINEER_R-2662248) |
-| 65 | (IND) SENIOR, DATA ENGINEER | Walmart Global Tech | IN KA BANGALORE Home Office PTPP1 | [workday](https://walmart.wd504.myworkdayjobs.com/en-US/WalmartExternal/job/IN-KA-BANGALORE-Home-Office-PTPP1/XMLNAME--IND--SENIOR--DATA-ENGINEER_R-2606263) |
-| 65 | (IND) STAFF, DATA ENGINEER | Walmart Global Tech | IN KA BANGALORE Home Office PTPP1 | [workday](https://walmart.wd504.myworkdayjobs.com/en-US/WalmartExternal/job/IN-KA-BANGALORE-Home-Office-PTPP1/XMLNAME--IND--STAFF--DATA-ENGINEER_R-2648853) |
-| 45 | Staff Data Engineer | Visa | US - Austin, TX | [workday](https://visa.wd5.myworkdayjobs.com/en-US/Visa/job/US---Austin-TX/Staff-Data-Engineer_REF074767W) |
-| 45 | Sr. Data Engineer | Visa | SG - Singapore | [workday](https://visa.wd5.myworkdayjobs.com/en-US/Visa/job/SG---Singapore/Sr-Data-Engineer_REF088913W) |
-| 45 | Senior Specialist, GSF DnA Data Engineer | MSD | IND - Telangana - Hyderabad (Hitec City Raidurg) | [workday](https://msd.wd5.myworkdayjobs.com/en-US/SearchJobs/job/IND---Telangana---Hyderabad-Hitec-City-Raidurg/Senior-Specialist--GSF-DnA-Data-Engineer_R394174-1) |
-| 45 | Senior Specialist, Process Data Engineering | MSD | IND - Telangana - Hyderabad (Hitec City Raidurg) | [workday](https://msd.wd5.myworkdayjobs.com/en-US/SearchJobs/job/IND---Telangana---Hyderabad-Hitec-City-Raidurg/Senior-Specialist--Process-Data-Engineering_R416416-1) |
-| 45 | Senior Specialist, Data Engineering and Analytics | MSD | 5 Locations | [workday](https://msd.wd5.myworkdayjobs.com/en-US/SearchJobs/job/USA---New-Jersey---Rahway/Senior-Specialist--Data-Engineering-and-Analytics_R421442-1) |
-| 45 | Senior Associate, AI and Analytics Data Engineer | Pfizer | Greece-Thessaloniki Chortiatis | [workday](https://pfizer.wd1.myworkdayjobs.com/en-US/PfizerCareers/job/Greece-Thessaloniki-Chortiatis/Senior-Associate--AI-and-Analytics-Data-Engineer_4966014) |
-| 45 | Senior Data Engineer | Walmart Global Tech | Sunnyvale, CA | [workday](https://walmart.wd504.myworkdayjobs.com/en-US/WalmartExternal/job/Sunnyvale-CA/Senior-Data-Engineer_R-2670105) |
-| 45 | Staff Data engineer | Walmart Global Tech | Sunnyvale, CA | [workday](https://walmart.wd504.myworkdayjobs.com/en-US/WalmartExternal/job/Sunnyvale-CA/Staff-Data-engineer_R-2670655-1) |
-| 45 | Principal Data Engineer | Walmart Global Tech | Sunnyvale, CA | [workday](https://walmart.wd504.myworkdayjobs.com/en-US/WalmartExternal/job/Sunnyvale-CA/Principal-Data-Engineer_R-2671675) |
-| 45 | Senior, Data Engineer | Walmart Global Tech | IN TN CHENNAI Home Office Capita Land | [workday](https://walmart.wd504.myworkdayjobs.com/en-US/WalmartExternal/job/IN-TN-CHENNAI-Home-Office-Capita-Land/Senior--Data-Engineer_R-2663450) |
-| 45 | Principal, Data Engineer | Walmart Global Tech | IN TN CHENNAI Home Office Capita Land | [workday](https://walmart.wd504.myworkdayjobs.com/en-US/WalmartExternal/job/IN-TN-CHENNAI-Home-Office-Capita-Land/Principal--Data-Engineer_R-2663493) |
-| 45 | Staff, Data Engineer | Walmart Global Tech | IN TN CHENNAI Home Office Capita Land | [workday](https://walmart.wd504.myworkdayjobs.com/en-US/WalmartExternal/job/IN-TN-CHENNAI-Home-Office-Capita-Land/Staff--Data-Engineer_R-2663464-1) |
+| 45 | Sr. Data Engineer | Visa | US - Bellevue, WA | [workday](https://visa.wd5.myworkdayjobs.com/en-US/Visa/job/US---Bellevue-WA/Sr-Data-Engineer_REF088349W) |
+| 45 | Associate Director, Data Engineering Lead | Novartis | 2 Locations | [workday](https://novartis.wd3.myworkdayjobs.com/en-US/Novartis_Careers/job/East-Hanover/Associate-Director--Data-Engineering-Lead_REQ-10086363-1) |
+| 45 | Staff, Software Engineer- Data Engineer | Walmart Global Tech | (USA) BELLEVUE SKYLINE OFFICE WA BELLEVUE Home Office | [workday](https://walmart.wd504.myworkdayjobs.com/en-US/WalmartExternal/job/USA-BELLEVUE-SKYLINE-OFFICE-WA-BELLEVUE-Home-Office/Staff--Software-Engineer--Data-Engineer_R-2677793) |
+| 45 | Staff, Software Engineer (Backend & Data Engineering) | Walmart Global Tech | (USA) Crossman Respect Building CA SUNNYVALE Home Office | [workday](https://walmart.wd504.myworkdayjobs.com/en-US/WalmartExternal/job/USA-Crossman-Respect-Building-CA-SUNNYVALE-Home-Office/XMLNAME--USA--Staff--Software-Engineer_R-2533475-1) |
+| 30 | Senior Solutions Architect - Digital Natives | Databricks | Sweden | [greenhouse](https://databricks.com/company/careers/open-positions/job?gh_jid=8885049002) |
+| 25 | Fraud Strategy Associate | Brex | São Paulo, São Paulo, Brazil | [greenhouse](https://www.brex.com/careers/8903752002?gh_jid=8903752002) |
+| 25 | Senior Software Engineer, Query | MongoDB | Dublin, Ireland | [greenhouse](https://www.mongodb.com/careers/job/?gh_jid=8300245) |
+| 10 | Senior Software Engineer, Backend (Identity Data) | Affirm | Remote US | [greenhouse](https://job-boards.greenhouse.io/affirm/jobs/8017503003) |
+| 10 | Senior Software Engineer, Backend (Identity Data)  | Affirm | Remote Canada | [greenhouse](https://job-boards.greenhouse.io/affirm/jobs/8017505003) |
+| 10 | Software Engineer II, Backend (Purchasing Power - Core) | Affirm | Remote Canada | [greenhouse](https://job-boards.greenhouse.io/affirm/jobs/8017509003) |
+| 5 | Integration Engineer | Stripe | Dublin | [greenhouse](https://stripe.com/jobs/search?gh_jid=8267102) |
+| 5 | Strategy & Ops, Enterprise | Stripe | San Francisco | [greenhouse](https://stripe.com/jobs/search?gh_jid=8053933) |
+| 5 | Underwriting Analyst | Brex | Vancouver, British Columbia, Canada | [greenhouse](https://www.brex.com/careers/8903732002?gh_jid=8903732002) |
+| 5 | Senior Software Engineer | Coinbase | Remote - USA | [greenhouse](https://www.coinbase.com/careers/positions/8304034?gh_jid=8304034) |
+| 5 | Software Engineer - Crypto Data Foundations | Coinbase | Remote - USA | [greenhouse](https://www.coinbase.com/careers/positions/8304038?gh_jid=8304038) |
+| 5 | Software Engineer (6months to 2 years experience, Java/Python) | Visa | IN - Bengaluru, India | [workday](https://visa.wd5.myworkdayjobs.com/en-US/Visa/job/IN---Bengaluru-India/Software-Engineer--6months-to-2-years-experience--Java-Python-_REF089294W) |
+| 5 | Senior Customer Engineer, Majors - NE | Cloudflare | Hybrid | [greenhouse](https://boards.greenhouse.io/cloudflare/jobs/8300941?gh_jid=8300941) |
+| 5 | Manager, Client Platform Engineering | MongoDB | Palo Alto; San Francisco | [greenhouse](https://www.mongodb.com/careers/job/?gh_jid=8300746) |
+| 0 | Account Executive, Velocity Platforms (Hunter) | Stripe | New York, NY | [greenhouse](https://stripe.com/jobs/search?gh_jid=8304836) |
+| 0 | Account Executive, Velocity Platforms (Hunter) | Stripe | San Francisco, CA | [greenhouse](https://stripe.com/jobs/search?gh_jid=8304841) |
