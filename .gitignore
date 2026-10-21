@@ -19,3 +19,6 @@ outreach/
 
 # local report scratch (reports/latest.md is committed by CI)
 reports/*.local.md
+
+# generated marketing assets - regenerate from scripts/generate_public_stats.py + site/
+share/
