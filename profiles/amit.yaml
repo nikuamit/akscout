@@ -3,7 +3,8 @@ title: Senior Data Engineer
 location: Bengaluru, India
 years_experience: 9
 remote_ok: true
-email: nikuamit.sahu256@gmail.com
+# email intentionally omitted: this file lives in a public repo, and
+# nothing in the codebase reads this field anyway (grep confirmed).
 
 target_titles:
   - data engineer
