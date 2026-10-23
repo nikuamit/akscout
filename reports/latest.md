@@ -1,26 +1,26 @@
 # JobScout report for Amit Kumar Sahu
 
-_Generated 2026-10-22 08:16 UTC - 20 jobs_
+_Generated 2026-10-23 08:12 UTC - 20 jobs_
 
 | Score | Title | Company | Location | Link |
 |---|---|---|---|---|
-| 45 | Senior Data Engineer | Visa | SG - Singapore | [workday](https://visa.wd5.myworkdayjobs.com/en-US/Visa/job/SG---Singapore/Senior-Data-Engineer_REF088211W-1) |
-| 30 | Senior Solutions Architect - Digital Natives | Databricks | Finland | [greenhouse](https://databricks.com/company/careers/open-positions/job?gh_jid=8905967002) |
-| 25 | Fraud Strategy Associate | Brex | Seattle, Washington, United States | [greenhouse](https://www.brex.com/careers/8907623002?gh_jid=8907623002) |
-| 25 | Fraud Strategy Associate | Brex | Vancouver, British Columbia, Canada | [greenhouse](https://www.brex.com/careers/8907499002?gh_jid=8907499002) |
-| 25 | Fraud Strategy Associate | Brex | Salt Lake City, Utah, United States | [greenhouse](https://www.brex.com/careers/8907553002?gh_jid=8907553002) |
-| 25 | Fraud Strategy Associate | Brex | San Francisco, California, United States | [greenhouse](https://www.brex.com/careers/8907563002?gh_jid=8907563002) |
-| 25 | Fraud Strategy Associate | Brex | New York, New York, United States | [greenhouse](https://www.brex.com/careers/8907584002?gh_jid=8907584002) |
-| 25 | Analyst, Early Career (Full Stack) | Affirm | New York, New York, United States; San Francisco, California, United States | [greenhouse](https://job-boards.greenhouse.io/affirm/jobs/8039471003) |
-| 25 | Solutions Architect - Consumer Packaged Goods (CPG) | Databricks | Connecticut; Delaware; Florida; Maryland; New Jersey; Northeast - United States; Remote - Georgia; Remote - New York; Remote - North Carolina; Remote - Pennsylvania; Remote - Virginia; Remote - Washington D.C.; South Carolina; Southeast - United States | [greenhouse](https://databricks.com/company/careers/open-positions/job?gh_jid=8780675002) |
-| 25 | Senior Software Engineer - Platform Billing Core | Elastic | United States | [greenhouse](https://jobs.elastic.co/jobs?gh_jid=8249255&gh_jid=8249255) |
-| 25 | Senior Software Engineer, App Modernization | MongoDB | Sydney | [greenhouse](https://www.mongodb.com/careers/job/?gh_jid=8305331) |
-| 25 | Senior Solutions Architect | MongoDB | Mumbai | [greenhouse](https://www.mongodb.com/careers/job/?gh_jid=8055422) |
-| 10 | Senior Software Engineer, Backend (Cost Engineering) | Affirm | Remote Canada | [greenhouse](https://job-boards.greenhouse.io/affirm/jobs/8033589003) |
-| 10 | Senior Data Scientist, Product | Robinhood | Menlo Park, CA | [greenhouse](https://boards.greenhouse.io/robinhood/jobs/8080893?t=gh_src=&gh_jid=8080893) |
-| 10 | Senior Backend Software Engineer - Loki - NASA - Remote | Grafana Labs | United States (Remote) | [greenhouse](https://job-boards.greenhouse.io/grafanalabs/jobs/6229350004) |
-| 10 | Senior Backend Software Engineer - Loki - NASA - Remote | Grafana Labs | Canada (Remote) | [greenhouse](https://job-boards.greenhouse.io/grafanalabs/jobs/6229352004) |
-| 10 | Staff Backend Software Engineer - Loki - NASA - Remote | Grafana Labs | United States (Remote) | [greenhouse](https://job-boards.greenhouse.io/grafanalabs/jobs/6229322004) |
-| 10 | Staff Backend Software Engineer - Loki - NASA - Remote | Grafana Labs | Canada (Remote) | [greenhouse](https://job-boards.greenhouse.io/grafanalabs/jobs/6229324004) |
-| 10 | Capacity Engineer | Cloudflare | Hybrid | [greenhouse](https://boards.greenhouse.io/cloudflare/jobs/8300518?gh_jid=8300518) |
-| 5 | Credit Risk Analyst Commercial Underwriter | Stripe | Singapore | [greenhouse](https://stripe.com/jobs/search?gh_jid=8287916) |
+| 65 | Sr. Data Engineer | Visa | IN - Bengaluru, India | [workday](https://visa.wd5.myworkdayjobs.com/en-US/Visa/job/IN---Bengaluru-India/Sr-Data-Engineer_REF089134W-1) |
+| 40 | Director, Data Engineering | Visa | US - Bellevue, WA | [workday](https://visa.wd5.myworkdayjobs.com/en-US/Visa/job/US---Bellevue-WA/Director--Data-Engineering_REF089520W) |
+| 25 | Senior Analyst | Affirm | Remote Canada | [greenhouse](https://job-boards.greenhouse.io/affirm/jobs/7804955003) |
+| 25 | Solutions Architect - Financial Services (Hunter)  | Databricks | Georgia; Illinois; Massachusetts; New Jersey; New York; North Carolina; Texas; Washington, D.C. | [greenhouse](https://databricks.com/company/careers/open-positions/job?gh_jid=8884587002) |
+| 25 | Data Scientist | Cloudflare | In-Office | [greenhouse](https://boards.greenhouse.io/cloudflare/jobs/8275927?gh_jid=8275927) |
+| 25 | Senior Forward Deployment Engineer | MongoDB | Austin; Boston; Dallas; Denver; Houston; Los Angeles; Nashville; New York City; Palo Alto; Philadelphia; San Francisco; Seattle; United States | [greenhouse](https://www.mongodb.com/careers/job/?gh_jid=8304146) |
+| 25 | Senior Solutions Architect (Pre-Sales) | MongoDB | New York City | [greenhouse](https://www.mongodb.com/careers/job/?gh_jid=8311246) |
+| 25 | Senior Technical Services Engineer | MongoDB | Tokyo | [greenhouse](https://www.mongodb.com/careers/job/?gh_jid=8205442) |
+| 10 | Staff Software Engineer, Payments Intelligence | Stripe | Seattle, New York, San Francisco | [greenhouse](https://stripe.com/jobs/search?gh_jid=8260980) |
+| 10 | Data Science Intern (2027 Start) | Databricks | Mountain View, California; San Francisco, California | [greenhouse](https://databricks.com/company/careers/open-positions/job?gh_jid=6866538002) |
+| 10 | Scale Solution Engineer | Databricks | Heredia, Costa Rica | [greenhouse](https://databricks.com/company/careers/open-positions/job?gh_jid=8779031002) |
+| 10 | Principal, Marketing Analytics | Elastic | United States | [greenhouse](https://jobs.elastic.co/jobs?gh_jid=8281506&gh_jid=8281506) |
+| 10 | Customer Security Compliance Specialist | Cloudflare | Hybrid | [greenhouse](https://boards.greenhouse.io/cloudflare/jobs/8311164?gh_jid=8311164) |
+| 10 | Product Cost Analyst | Cloudflare | Hybrid | [greenhouse](https://boards.greenhouse.io/cloudflare/jobs/8305918?gh_jid=8305918) |
+| 5 | Staff Web Engineer, Advisor Products | Robinhood | New York, NY | [greenhouse](https://boards.greenhouse.io/robinhood/jobs/8302244?t=gh_src=&gh_jid=8302244) |
+| 5 | Sr. SW Engineer (Python, Jenkins, Github, Devops, Change Management, 3-6 years) | Visa | IN - Bengaluru, India | [workday](https://visa.wd5.myworkdayjobs.com/en-US/Visa/job/IN---Bengaluru-India/Sr-SW-Engineer--Python--Jenkins--Github--Devops--Change-Management--3-6-years-_REF089307W-1) |
+| 5 | Sr. Technical Program Manager, FDE - LATAM | Databricks | USCA | [greenhouse](https://databricks.com/company/careers/open-positions/job?gh_jid=8684079002) |
+| 5 | Software Engineer, Platform | Scale AI | San Francisco, CA; New York, NY | [greenhouse](https://job-boards.greenhouse.io/scaleai/jobs/4594879005) |
+| 5 | Senior Software Engineer, Replication | MongoDB | United States | [greenhouse](https://www.mongodb.com/careers/job/?gh_jid=8263247) |
+| 5 | Senior Software Engineer, Workload Resilience | MongoDB | United States | [greenhouse](https://www.mongodb.com/careers/job/?gh_jid=8263467) |
