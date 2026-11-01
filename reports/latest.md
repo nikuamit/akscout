@@ -1,26 +1,22 @@
 # JobScout report for Amit Kumar Sahu
 
-_Generated 2026-10-31 09:13 UTC - 20 jobs_
+_Generated 2026-11-01 09:59 UTC - 16 jobs_
 
 | Score | Title | Company | Location | Link |
 |---|---|---|---|---|
-| 65 | STAFF, DATA ENGINEER | Walmart Global Tech | IN KA BANGALORE Home Office PTPP1 | [workday](https://walmart.wd504.myworkdayjobs.com/en-US/WalmartExternal/job/IN-KA-BANGALORE-Home-Office-PTPP1/STAFF--DATA-ENGINEER_R-2694950) |
-| 40 | Associate Director, Pharmaceutical Data Engineer | MSD | 4 Locations | [workday](https://msd.wd5.myworkdayjobs.com/en-US/SearchJobs/job/USA---Pennsylvania---West-Point/Associate-Director--Pharmaceutical-Data-Engineer_R424311) |
-| 40 | Specialist, Data Engineering | MSD | 2 Locations | [workday](https://msd.wd5.myworkdayjobs.com/en-US/SearchJobs/job/IND---Telangana---Hyderabad-Hitec-City-Raidurg/Specialist--Data-Engineering_R423514-1) |
-| 25 | Senior Manager, Data Science | GitLab | Remote, United States | [greenhouse](https://job-boards.greenhouse.io/gitlab/jobs/8922062002) |
-| 20 | Staff Analytics Engineer | Coinbase | Remote - USA | [greenhouse](https://www.coinbase.com/careers/positions/8047150?gh_jid=8047150) |
-| 15 | Staff Software Engineer, Batch Processing Platform | Pinterest | Seattle, WA, US; Remote, US | [greenhouse](https://www.pinterestcareers.com/jobs/?gh_jid=7832348) |
-| 10 | Senior Software Engineer, Backend (AI Platform) | Affirm | Remote Canada | [greenhouse](https://job-boards.greenhouse.io/affirm/jobs/8040388003) |
-| 10 | Senior Software Engineer, Backend (AI Platform)  | Affirm | Remote US | [greenhouse](https://job-boards.greenhouse.io/affirm/jobs/8040386003) |
-| 10 | Software Engineer II, Full Stack (Card Pre-Swipe Experience) | Affirm | Remote Canada | [greenhouse](https://job-boards.greenhouse.io/affirm/jobs/8042399003) |
-| 10 | Data Scientist, Enterprise Analytics | GitLab | Remote, United States | [greenhouse](https://job-boards.greenhouse.io/gitlab/jobs/8922013002) |
-| 5 | Master's Machine Learning Engineer, Intern | Stripe | San Francisco, New York City, Seattle | [greenhouse](https://stripe.com/jobs/search?gh_jid=8333074) |
-| 5 | Master's Machine Learning Engineer, Intern | Stripe | Toronto | [greenhouse](https://stripe.com/jobs/search?gh_jid=8333122) |
-| 5 | PhD Machine Learning Engineer, Intern | Stripe | Toronto | [greenhouse](https://stripe.com/jobs/search?gh_jid=8328664) |
-| 5 | PhD Machine Learning Engineer, Intern | Stripe | San Francisco, New York City, Seattle | [greenhouse](https://stripe.com/jobs/search?gh_jid=8328662) |
-| 5 | Senior Software Development Engineer | Razorpay | Bengaluru | [greenhouse](https://job-boards.greenhouse.io/razorpaysoftwareprivatelimited/jobs/4746983005) |
-| 5 | Manager, Cross-Border Payment Operations | Brex | São Paulo, São Paulo, Brazil | [greenhouse](https://www.brex.com/careers/8580566002?gh_jid=8580566002) |
-| 5 | Manager, Cross-Border Payment Operations | Brex | Seattle, Washington, United States | [greenhouse](https://www.brex.com/careers/8687485002?gh_jid=8687485002) |
-| 5 | Manager, Cross-Border Payment Operations | Brex | San Francisco, California, United States | [greenhouse](https://www.brex.com/careers/8687488002?gh_jid=8687488002) |
-| 5 | Manager, Cross-Border Payment Operations | Brex | New York, New York, United States | [greenhouse](https://www.brex.com/careers/8687493002?gh_jid=8687493002) |
-| 5 | Manager, Cross-Border Payment Operations | Brex | Salt Lake City, Utah, United States | [greenhouse](https://www.brex.com/careers/8579396002?gh_jid=8579396002) |
+| 15 | Sr. Solutions Architect (Energy) | Databricks | Sydney, Australia | [greenhouse](https://databricks.com/company/careers/open-positions/job?gh_jid=8926307002) |
+| 0 | Customer Success Team Agent II | Coinbase | Remote - USA | [greenhouse](https://www.coinbase.com/careers/positions/8334761?gh_jid=8334761) |
+| 0 | Customer Success Team Agent II | Coinbase | Remote - USA | [greenhouse](https://www.coinbase.com/careers/positions/8334752?gh_jid=8334752) |
+| 0 | Customer Support Specialist II | Coinbase | Hyderabad, India | [greenhouse](https://www.coinbase.com/careers/positions/8334767?gh_jid=8334767) |
+| 0 | Customer Support Specialist II | Coinbase | Hyderabad, India | [greenhouse](https://www.coinbase.com/careers/positions/8334764?gh_jid=8334764) |
+| 0 | Named Hunter Account Executive - Singapore | Databricks | Singapore | [greenhouse](https://databricks.com/company/careers/open-positions/job?gh_jid=8916466002) |
+| 0 | Strategic Core Account Executive - FSI  | Databricks | Singapore | [greenhouse](https://databricks.com/company/careers/open-positions/job?gh_jid=8910854002) |
+| 0 | Strategic Core Account Executive - Public Sector | Databricks | Singapore | [greenhouse](https://databricks.com/company/careers/open-positions/job?gh_jid=8910842002) |
+| 0 | Associate Specialist – Accounting to Reporting (AtR) | MSD | MYS - Selangor - Petaling Jaya (Ascent Paradigm) | [workday](https://msd.wd5.myworkdayjobs.com/en-US/SearchJobs/job/MYS---Selangor---Petaling-Jaya-Ascent-Paradigm/Associate-Specialist---Accounting-to-Reporting--AtR-_R418133) |
+| 0 | Executive Assistant to the Chief R&D Artificial Intelligence Officer | Pfizer | United States - Washington – Bothell | [workday](https://pfizer.wd1.myworkdayjobs.com/en-US/PfizerCareers/job/United-States---Washington--Bothell/Executive-Assistant-to-the-Chief-R-D-Artificial-Intelligence-Officer_4966430-2) |
+| 0 | Dermatology Health & Science Specialist (AD) - Hartford, CT | Pfizer | United States - Connecticut - Hartford | [workday](https://pfizer.wd1.myworkdayjobs.com/en-US/PfizerCareers/job/United-States---Connecticut---Hartford/Dermatology-Health---Science-Specialist--AD----Hartford--CT_4965011-1) |
+| 0 | Asia AZpire Graduate Program - Indonesia | AstraZeneca | Indonesia - Jakarta | [workday](https://astrazeneca.wd3.myworkdayjobs.com/en-US/Careers/job/Indonesia---Jakarta/Asia-AZpire-Graduate-Program---Indonesia_R-262298) |
+| 0 | Asia AZpire Graduate Program - Philippines | AstraZeneca | Indonesia - Jakarta | [workday](https://astrazeneca.wd3.myworkdayjobs.com/en-US/Careers/job/Indonesia---Jakarta/Asia-AZpire-Graduate-Program---Philippines_R-262814) |
+| 0 | Data, Analytics & Insights Manager | AstraZeneca | Mexico - Mexico City - Park Insurgentes | [workday](https://astrazeneca.wd3.myworkdayjobs.com/en-US/Careers/job/Mexico---Mexico-City---Park-Insurgentes/Data--Analytics---Insights-Manager_R-263179) |
+| 0 | Manager II, Engineering | Uber | Bengaluru, Karnataka, India | [oracle_hcm](https://iaziqy.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/UberCareers/job/304363) |
+| 0 | Partner Engineer | Uber | Tokyo, Japan | [oracle_hcm](https://iaziqy.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/UberCareers/job/160478) |
