@@ -1,26 +1,26 @@
 # JobScout report for Amit Kumar Sahu
 
-_Generated 2026-11-03 10:25 UTC - 20 jobs_
+_Generated 2026-11-04 10:21 UTC - 20 jobs_
 
 | Score | Title | Company | Location | Link |
 |---|---|---|---|---|
-| 40 | Specialist, Semantic Data Engineer | MSD | 2 Locations | [workday](https://msd.wd5.myworkdayjobs.com/en-US/SearchJobs/job/CZE---Central-Bohemian---Prague-Five/Specialist--Semantic-Data-Engineer_R423934-1) |
-| 30 | Data Scientist, FX Quantitative Research | Stripe | New York, NY | [greenhouse](https://stripe.com/jobs/search?gh_jid=8346831) |
-| 30 | Data Scientist, FX Quantitative Research | Stripe | Toronto | [greenhouse](https://stripe.com/jobs/search?gh_jid=8346778) |
-| 25 | Senior Solutions Architect | MongoDB | London | [greenhouse](https://www.mongodb.com/careers/job/?gh_jid=8345848) |
-| 25 | Solutions Architect | MongoDB | Singapore | [greenhouse](https://www.mongodb.com/careers/job/?gh_jid=8333381) |
-| 10 | Staff Software Engineer, Fullstack (Card Experiences) | Affirm | Remote Canada | [greenhouse](https://job-boards.greenhouse.io/affirm/jobs/8040273003) |
-| 10 | Staff Software Engineer, Fullstack (Card Experiences) | Affirm | Remote US | [greenhouse](https://job-boards.greenhouse.io/affirm/jobs/8040271003) |
-| 10 | Senior Data Scientist, Platform | Coinbase | Remote - USA | [greenhouse](https://www.coinbase.com/careers/positions/8304052?gh_jid=8304052) |
-| 10 | Staff Applied Data Scientist, Pricing | Coinbase | Remote - USA | [greenhouse](https://www.coinbase.com/careers/positions/8083051?gh_jid=8083051) |
-| 10 | Delivery Solutions Architect | Databricks | Canada | [greenhouse](https://databricks.com/company/careers/open-positions/job?gh_jid=8907990002) |
-| 5 | Account Executive, Startups (Grower) | Stripe | Chicago | [greenhouse](https://stripe.com/jobs/search?gh_jid=8287920) |
-| 5 | Senior AI Operations Engineer, Enterprise Tech | Robinhood | Bellevue, WA; Menlo Park, CA; New York, NY | [greenhouse](https://boards.greenhouse.io/robinhood/jobs/8348038?t=gh_src=&gh_jid=8348038) |
-| 5 | Software Engineer, AI Security | Robinhood | Bellevue, WA; Menlo Park, CA | [greenhouse](https://boards.greenhouse.io/robinhood/jobs/8220757?t=gh_src=&gh_jid=8220757) |
-| 5 | Senior Risk Analyst, Payments Risk Operations | Coinbase | Remote - USA | [greenhouse](https://www.coinbase.com/careers/positions/8346266?gh_jid=8346266) |
-| 5 | Sr. SW Engineer (Python, Product Reliability / DB Reliability Eng - 4-6 years' exp) | Visa | IN - Bengaluru, India | [workday](https://visa.wd5.myworkdayjobs.com/en-US/Visa/job/IN---Bengaluru-India/Sr-SW-Engineer--Python--Product-Reliability---DB-Reliability-Eng---4-6-years--exp-_REF089041W) |
-| 5 | Sr. Director - Software Engineering (Java, GenAI, Payment Risk, Cloud, NoSQL - 18+ years' exp) | Visa | IN - Bengaluru, India | [workday](https://visa.wd5.myworkdayjobs.com/en-US/Visa/job/IN---Bengaluru-India/Sr-Director---Software-Engineering--Java--GenAI--Payment-Risk--Cloud--NoSQL---18--years--exp-_REF088645W-1) |
-| 5 | Security Engineer III - Infra Security | Meesho | Bangalore, Karnataka | [lever](https://jobs.lever.co/meesho/9b5a5436-cdc3-4bcd-8e5e-b7294af185d5) |
-| 5 | Designated Support Engineer - Spark | Databricks | Seoul, South Korea | [greenhouse](https://databricks.com/company/careers/open-positions/job?gh_jid=8661520002) |
-| 5 | Designated Support Engineer - Spark | Databricks | Singapore | [greenhouse](https://databricks.com/company/careers/open-positions/job?gh_jid=8907735002) |
-| 5 | Senior Forward Deployed Engineer | Databricks | London, United Kingdom | [greenhouse](https://databricks.com/company/careers/open-positions/job?gh_jid=8927390002) |
+| 65 | STAFF, DATA ENGINEER | Walmart Global Tech | IN KA BANGALORE Home Office PTPP1 | [workday](https://walmart.wd504.myworkdayjobs.com/en-US/WalmartExternal/job/IN-KA-BANGALORE-Home-Office-PTPP1/STAFF--DATA-ENGINEER_R-2683337) |
+| 65 | DATA ENGINEER III | Walmart Global Tech | IN KA BANGALORE Home Office PTPP1 | [workday](https://walmart.wd504.myworkdayjobs.com/en-US/WalmartExternal/job/IN-KA-BANGALORE-Home-Office-PTPP1/DATA-ENGINEER-III_R-2683338) |
+| 65 | (IND) STAFF, DATA ENGINEER | Walmart Global Tech | IN KA BANGALORE Home Office PTPP2 | [workday](https://walmart.wd504.myworkdayjobs.com/en-US/WalmartExternal/job/IN-KA-BANGALORE-Home-Office-PTPP2/XMLNAME--IND--STAFF--DATA-ENGINEER_R-2677788) |
+| 65 | (IND) STAFF, DATA ENGINEER | Walmart Global Tech | IN KA BANGALORE Home Office PTPP2 | [workday](https://walmart.wd504.myworkdayjobs.com/en-US/WalmartExternal/job/IN-KA-BANGALORE-Home-Office-PTPP2/XMLNAME--IND--STAFF--DATA-ENGINEER_R-2677808) |
+| 65 | (IND) STAFF, DATA ENGINEER | Walmart Global Tech | IN KA BANGALORE Home Office PTPP2 | [workday](https://walmart.wd504.myworkdayjobs.com/en-US/WalmartExternal/job/IN-KA-BANGALORE-Home-Office-PTPP2/XMLNAME--IND--STAFF--DATA-ENGINEER_R-2677810) |
+| 45 | Senior Specialist, Manufacturing Data Engineering & Digital Integration | MSD | USA - Delaware - Wilmington (Biotech) | [workday](https://msd.wd5.myworkdayjobs.com/en-US/SearchJobs/job/USA---Delaware---Wilmington-Biotech/Senior-Specialist--Manufacturing-Data-Engineering---Digital-Integration_R420015-1) |
+| 45 | STAFF, DATA ENGINEER | Walmart Global Tech | IN TN CHENNAI Home Office Capita Land | [workday](https://walmart.wd504.myworkdayjobs.com/en-US/WalmartExternal/job/IN-TN-CHENNAI-Home-Office-Capita-Land/STAFF--DATA-ENGINEER_R-2690211) |
+| 40 | Specialist, Process Data Engineering | MSD | IND - Telangana - Hyderabad (Hitec City Raidurg) | [workday](https://msd.wd5.myworkdayjobs.com/en-US/SearchJobs/job/IND---Telangana---Hyderabad-Hitec-City-Raidurg/Specialist--Process-Data-Engineering_R416425-1) |
+| 25 | Senior Associate, Compliance Model Governance | Coinbase | Remote - USA | [greenhouse](https://www.coinbase.com/careers/positions/8350050?gh_jid=8350050) |
+| 25 | Senior Software Engineer, IT Digital Employee Experience | Databricks | San Francisco, California | [greenhouse](https://databricks.com/company/careers/open-positions/job?gh_jid=8829053002) |
+| 25 | Solutions Architect - Telco | Databricks | Denver, Colorado | [greenhouse](https://databricks.com/company/careers/open-positions/job?gh_jid=8929038002) |
+| 25 | Revenue Accounting Manager - United States - Remote | Grafana Labs | United States (Remote) | [greenhouse](https://job-boards.greenhouse.io/grafanalabs/jobs/6242367004) |
+| 25 | Engineering Manager, Revenue Engineering | Cloudflare | Hybrid | [greenhouse](https://boards.greenhouse.io/cloudflare/jobs/8331928?gh_jid=8331928) |
+| 15 | Software Engineer II, Fullstack (Capital Orchestration) | Affirm | Remote US | [greenhouse](https://job-boards.greenhouse.io/affirm/jobs/7749755003) |
+| 15 | Sr. Partner Solutions Architect - Customer Lake & Lakewatch | Databricks | United States | [greenhouse](https://databricks.com/company/careers/open-positions/job?gh_jid=8807797002) |
+| 10 | Software Engineer, International Expansion | Robinhood | Toronto, Canada | [greenhouse](https://boards.greenhouse.io/robinhood/jobs/8207701?t=gh_src=&gh_jid=8207701) |
+| 10 | Growth Program Manager  | Scale AI | San Francisco, CA; New York, NY | [greenhouse](https://job-boards.greenhouse.io/scaleai/jobs/4749989005) |
+| 10 | Engineering Manager, Bots & Fraud | Cloudflare | Hybrid | [greenhouse](https://boards.greenhouse.io/cloudflare/jobs/8312215?gh_jid=8312215) |
+| 10 | Software Engineer II | Samsara | Remote - US | [greenhouse](https://www.samsara.com/company/careers/roles/8223645?gh_jid=8223645) |
+| 5 | Account Executive Enterprise (Korean-speaking, Singapore based) | Stripe | Singapore | [greenhouse](https://stripe.com/jobs/search?gh_jid=8348835) |
