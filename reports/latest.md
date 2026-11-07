@@ -1,26 +1,26 @@
 # JobScout report for Amit Kumar Sahu
 
-_Generated 2026-11-06 10:17 UTC - 20 jobs_
+_Generated 2026-11-07 09:33 UTC - 20 jobs_
 
 | Score | Title | Company | Location | Link |
 |---|---|---|---|---|
-| 45 | Engineering Manager | Razorpay | Bengaluru | [greenhouse](https://job-boards.greenhouse.io/razorpaysoftwareprivatelimited/jobs/4746944005) |
-| 45 | Solutions Architect - Digital Native Business (Geo) | Databricks | Connecticut; Remote - Massachusetts; Remote - New York; Remote - Pennsylvania | [greenhouse](https://databricks.com/company/careers/open-positions/job?gh_jid=8904745002) |
-| 45 | Lead, Technical Services Engineer - Partners | MongoDB | Bengaluru | [greenhouse](https://www.mongodb.com/careers/job/?gh_jid=8234586) |
-| 45 | Senior Data Engineer – Data & AI Platforms | Novartis | Hyderabad (Office) | [workday](https://novartis.wd3.myworkdayjobs.com/en-US/Novartis_Careers/job/Hyderabad-Office/Senior-Data-Engineer---Data---AI-Platforms_REQ-10087165) |
-| 35 | Solutions Architect – Digital Sovereignty | Databricks | Munich, Germany | [greenhouse](https://databricks.com/company/careers/open-positions/job?gh_jid=8932117002) |
-| 25 | Full Stack Technical Developer | Elastic | Costa Rica | [greenhouse](https://jobs.elastic.co/jobs?gh_jid=8281841&gh_jid=8281841) |
-| 25 | Senior Data Analyst | MongoDB | Gurugram | [greenhouse](https://www.mongodb.com/careers/job/?gh_jid=8328780) |
-| 25 | Senior Solutions Architect | MongoDB | Melbourne; Sydney | [greenhouse](https://www.mongodb.com/careers/job/?gh_jid=7976421) |
-| 25 | Senior Solutions Architect | MongoDB | Switzerland | [greenhouse](https://www.mongodb.com/careers/job/?gh_jid=8355408) |
-| 25 | Senior Solutions Architect (Pre-Sales) | MongoDB | Chicago | [greenhouse](https://www.mongodb.com/careers/job/?gh_jid=8340799) |
-| 21 | Payments F&S Specialist | Stripe | Bengaluru | [greenhouse](https://stripe.com/jobs/search?gh_jid=8222642) |
-| 17 | Director, Data Science  | GitLab | Remote, Canada; Remote, United States | [greenhouse](https://job-boards.greenhouse.io/gitlab/jobs/8931768002) |
-| 15 | Staff Security Engineer, Abuse Control | Stripe | Barcelona | [greenhouse](https://stripe.com/jobs/search?gh_jid=8356917) |
-| 15 | Staff Security Engineer, Abuse Control | Stripe | Berlin | [greenhouse](https://stripe.com/jobs/search?gh_jid=8356916) |
-| 15 | Staff Security Engineer, Abuse Control | Stripe | Bucharest | [greenhouse](https://stripe.com/jobs/search?gh_jid=8356912) |
-| 10 | Staff Software Engineer, Fullstack (Account Management) | Affirm | Remote Canada | [greenhouse](https://job-boards.greenhouse.io/affirm/jobs/8162558003) |
-| 10 | Staff Software Engineer, Fullstack (Account Management) | Affirm | Remote US | [greenhouse](https://job-boards.greenhouse.io/affirm/jobs/8162556003) |
-| 10 | Senior Solutions Architect - Lakebase | Databricks | Stockholm, Sweden | [greenhouse](https://databricks.com/company/careers/open-positions/job?gh_jid=8932964002) |
-| 10 | Sr. Solutions Architect - AI Natives Business | Databricks | San Francisco, California | [greenhouse](https://databricks.com/company/careers/open-positions/job?gh_jid=8893720002) |
-| 10 | Sr. Solutions Engineer - AI Natives Business | Databricks | West Coast - United States | [greenhouse](https://databricks.com/company/careers/open-positions/job?gh_jid=8893772002) |
+| 45 | (USA) Staff, Data Engineer | Walmart Global Tech | (USA) Together Building AR Bentonville Home Office | [workday](https://walmart.wd504.myworkdayjobs.com/en-US/WalmartExternal/job/USA-Together-Building-AR-Bentonville-Home-Office/XMLNAME--USA--Staff--Data-Engineer_R-2684647-1) |
+| 45 | Staff, Data Engineer - Bentonville, Arkansas | Walmart Global Tech | (USA) ISD Office - DGTC AR BENTONVILLE Home Office | [workday](https://walmart.wd504.myworkdayjobs.com/en-US/WalmartExternal/job/USA-ISD-Office---DGTC-AR-BENTONVILLE-Home-Office/Staff--Data-Engineer---Bentonville--Arkansas_R-2686402) |
+| 25 | Controllership Intern | Stripe | Seattle, WA | [greenhouse](https://stripe.com/jobs/search?gh_jid=8357739) |
+| 25 | Consulting Engineer | MongoDB | Paris | [greenhouse](https://www.mongodb.com/careers/job/?gh_jid=8349115) |
+| 17 | Advisory Solutions Architect (Pre-Sales) | MongoDB | San Francisco | [greenhouse](https://www.mongodb.com/careers/job/?gh_jid=8359903) |
+| 17 | Staff Technical Program Manager, IT Audit & Governance | MongoDB | New York City; Palo Alto | [greenhouse](https://www.mongodb.com/careers/job/?gh_jid=8346181) |
+| 10 | Analytics Lead, Full Stack | Affirm | Remote US | [greenhouse](https://job-boards.greenhouse.io/affirm/jobs/8011130003) |
+| 10 | Analytics Lead, Full Stack | Affirm | Remote Canada | [greenhouse](https://job-boards.greenhouse.io/affirm/jobs/8011132003) |
+| 10 | Software Engineer II, Backend | Affirm | Remote US | [greenhouse](https://job-boards.greenhouse.io/affirm/jobs/8196112003) |
+| 10 | Software Engineer II, Backend | Affirm | Remote Canada | [greenhouse](https://job-boards.greenhouse.io/affirm/jobs/8196114003) |
+| 10 | ML/AI - Supply Chain | Samsara | Remote - US | [greenhouse](https://www.samsara.com/company/careers/roles/8359956?gh_jid=8359956) |
+| 10 | CX Business Intelligence Analyst | Gusto | Denver, CO - Hybrid; New York, NY - Hybrid | [greenhouse](https://job-boards.greenhouse.io/gusto/jobs/8119978) |
+| 5 | OpenRouter Product Accounting  | Stripe | Seattle, San Francisco, New York, Chicago  | [greenhouse](https://stripe.com/jobs/search?gh_jid=8348327) |
+| 5 | Senior Machine Learning Engineer | Coinbase | Remote - USA | [greenhouse](https://www.coinbase.com/careers/positions/8347602?gh_jid=8347602) |
+| 5 | Director (Technology Leader with hands-on exp in Platform / Application Development, GenAI, Python, Java, 14 - 18 years exp.) | Visa | IN - Bengaluru, India | [workday](https://visa.wd5.myworkdayjobs.com/en-US/Visa/job/IN---Bengaluru-India/Director--Technology-Leader-with-hands-on-exp-in-Platform---Application-Development--GenAI--Python--Java--14---18-years-exp-_REF089997W) |
+| 5 | Senior Backend Software Engineer- (AI Platform) | Databricks | Mountain View, California; San Francisco, California | [greenhouse](https://databricks.com/company/careers/open-positions/job?gh_jid=8035969002) |
+| 5 | Senior Software Engineer - Backend Infrastructure | Databricks | Bengaluru, India | [greenhouse](https://databricks.com/company/careers/open-positions/job?gh_jid=7647294002) |
+| 5 | Applied AI Engineer | Scale AI | Kuwait City, Kuwait | [greenhouse](https://job-boards.greenhouse.io/scaleai/jobs/4751059005) |
+| 5 | Product Manager, AI Applications | Scale AI | Kuwait City, Kuwait | [greenhouse](https://job-boards.greenhouse.io/scaleai/jobs/4751108005) |
+| 5 | Senior Full Stack Engineer - Database Observability, Grafana Cloud - Germany - Remote | Grafana Labs | Germany (Remote) | [greenhouse](https://job-boards.greenhouse.io/grafanalabs/jobs/6250631004) |
