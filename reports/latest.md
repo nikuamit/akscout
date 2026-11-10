@@ -1,26 +1,26 @@
 # JobScout report for Amit Kumar Sahu
 
-_Generated 2026-11-09 10:50 UTC - 20 jobs_
+_Generated 2026-11-10 10:42 UTC - 20 jobs_
 
 | Score | Title | Company | Location | Link |
 |---|---|---|---|---|
-| 25 | Evergreen Solutions Architect | Databricks | Tokyo, Japan | [greenhouse](https://databricks.com/company/careers/open-positions/job?gh_jid=7827370002) |
-| 5 | Solutions Architect (Japan) | Stripe | Japan | [greenhouse](https://stripe.com/jobs/search?gh_jid=8354754) |
-| 5 | Consulting Architect - Search | Elastic | United States | [greenhouse](https://jobs.elastic.co/jobs?gh_jid=8352728&gh_jid=8352728) |
-| 0 | Business Development Manager, Agentic Commerce | Stripe | San Francisco, CA | [greenhouse](https://stripe.com/jobs/search?gh_jid=7524334) |
-| 0 | Project Analyst | Visa | US - Foster City, CA | [workday](https://visa.wd5.myworkdayjobs.com/en-US/Visa/job/US---Foster-City-CA/Project-Analyst_REF090240W) |
-| 0 | Card Program Admin- Travel and Expense | Visa | US - Austin, TX | [workday](https://visa.wd5.myworkdayjobs.com/en-US/Visa/job/US---Austin-TX/Card-Program-Admin--Travel-and-Expense_REF090263W) |
-| 0 | Inside Sales Representative | Cloudflare | Hybrid | [greenhouse](https://boards.greenhouse.io/cloudflare/jobs/8317920?gh_jid=8317920) |
-| 0 | Inside Sales Representative | Cloudflare | Hybrid | [greenhouse](https://boards.greenhouse.io/cloudflare/jobs/8317970?gh_jid=8317970) |
-| 0 | Senior Technical Project Manager | MongoDB | Germany | [greenhouse](https://www.mongodb.com/careers/job/?gh_jid=8355268) |
-| 0 | Director, Regional Sales | GitLab | Remote, Japan | [greenhouse](https://job-boards.greenhouse.io/gitlab/jobs/8893938002) |
-| 0 | Senior Solutions Architect | GitLab | Remote, India | [greenhouse](https://job-boards.greenhouse.io/gitlab/jobs/8829837002) |
-| 0 | Strategic Account Executive - Singapore | GitLab | Remote, Singapore | [greenhouse](https://job-boards.greenhouse.io/gitlab/jobs/8887399002) |
-| 0 | Lead Account Manager – Netherlands (Customer Expansion & Retention) | Freshworks | London, , United Kingdom | [smartrecruiters](https://jobs.smartrecruiters.com/Freshworks/744000160579422) |
-| 0 | Lead Account Manager- UKI | Freshworks | London, , United Kingdom | [smartrecruiters](https://jobs.smartrecruiters.com/Freshworks/744000160578662) |
-| 0 | Enterprise Account Executive – Denmark & Norway | Freshworks | London, , United Kingdom | [smartrecruiters](https://jobs.smartrecruiters.com/Freshworks/744000160576229) |
-| 0 | Lead Account Executive – Netherlands (Mid-Market & Enterprise) | Freshworks | London, , United Kingdom | [smartrecruiters](https://jobs.smartrecruiters.com/Freshworks/744000160572194) |
-| 0 | Senior Specialist, Software Engineering | MSD | IND - Telangana - Hyderabad (Hitec City Raidurg) | [workday](https://msd.wd5.myworkdayjobs.com/en-US/SearchJobs/job/IND---Telangana---Hyderabad-Hitec-City-Raidurg/Senior-Specialist--Software-Engineering_R425462-1) |
-| 0 | Supply Chain Management & Customer Service Lead | MSD | IDN - Jakarta - Jakarta (Menara Astra) | [workday](https://msd.wd5.myworkdayjobs.com/en-US/SearchJobs/job/IDN---Jakarta---Jakarta-Menara-Astra/Supply-Chain-Management---Customer-Service-Lead_R426059) |
-| 0 | Director, Clinical Research | MSD | CHN - Beijing - Beijing (Wangjing Park) | [workday](https://msd.wd5.myworkdayjobs.com/en-US/SearchJobs/job/CHN---Beijing---Beijing-Wangjing-Park/Director--Clinical-Research_R426270-1) |
-| 0 | Commercial Effectiveness Lead | MSD | IDN - Jakarta - Jakarta (Menara Astra) | [workday](https://msd.wd5.myworkdayjobs.com/en-US/SearchJobs/job/IDN---Jakarta---Jakarta-Menara-Astra/Commercial-Effectiveness-Lead_R419893) |
+| 45 | Data Engineer - Sr. Consultant level | Visa | 2 Locations | [workday](https://visa.wd5.myworkdayjobs.com/en-US/Visa/job/US---Bellevue-WA/Data-Engineer---Sr-Consultant-level_REF079935W) |
+| 40 | Associate Data Engineer | Visa | US - Foster City, CA | [workday](https://visa.wd5.myworkdayjobs.com/en-US/Visa/job/US---Foster-City-CA/Associate-Data-Engineer_REF089618W) |
+| 25 | Solutions Architect | Databricks | Stockholm, Sweden | [greenhouse](https://databricks.com/company/careers/open-positions/job?gh_jid=8934786002) |
+| 25 | Senior Software Engineer, Atlas Agent Engine | MongoDB | Alberta; British Columbia; Manitoba; Quebec; Toronto | [greenhouse](https://www.mongodb.com/careers/job/?gh_jid=8360715) |
+| 25 | Senior Software Engineer, Atlas Agent Engine | MongoDB | United States | [greenhouse](https://www.mongodb.com/careers/job/?gh_jid=8360713) |
+| 10 | Software Engineer, Internship - 2027 | Brex | São Paulo, São Paulo, Brazil | [greenhouse](https://www.brex.com/careers/8935242002?gh_jid=8935242002) |
+| 10 | Senior Software Engineer, Backend (Consumer) | Affirm | Remote Canada | [greenhouse](https://job-boards.greenhouse.io/affirm/jobs/8197327003) |
+| 10 | Senior Software Engineer, Backend (Consumer) | Affirm | Remote US | [greenhouse](https://job-boards.greenhouse.io/affirm/jobs/8197325003) |
+| 10 | Senior Software Engineer, Backend (Trust & Safety) | Affirm | Remote US | [greenhouse](https://job-boards.greenhouse.io/affirm/jobs/8197334003) |
+| 10 | Senior Software Engineer, Backend (Trust & Safety) | Affirm | Remote Canada | [greenhouse](https://job-boards.greenhouse.io/affirm/jobs/8197336003) |
+| 10 | Sr. Solutions Engineer - Hunter (New Logo) | Databricks | Tokyo, Japan | [greenhouse](https://databricks.com/company/careers/open-positions/job?gh_jid=8929603002) |
+| 10 | Senior Supply Planning Manager - Canada | Samsara | Remote - Canada | [greenhouse](https://www.samsara.com/company/careers/roles/8355831?gh_jid=8355831) |
+| 5 | Product Operations Manager | Stripe | US Remote | [greenhouse](https://stripe.com/jobs/search?gh_jid=8315943) |
+| 5 | Solutions Architect, Enterprise (French Speaking)  | Stripe | France | [greenhouse](https://stripe.com/jobs/search?gh_jid=8336717) |
+| 5 | Associate Manager, AEO | Razorpay | Bengaluru | [greenhouse](https://job-boards.greenhouse.io/razorpaysoftwareprivatelimited/jobs/4694487005) |
+| 5 | Product Manager II | Razorpay | Bengaluru | [greenhouse](https://job-boards.greenhouse.io/razorpaysoftwareprivatelimited/jobs/4751768005) |
+| 5 | Senior Product Manager | Razorpay | Bengaluru | [greenhouse](https://job-boards.greenhouse.io/razorpaysoftwareprivatelimited/jobs/4749337005) |
+| 5 | Software Engineer II, Back-end, (AI Agents) | Affirm | Remote Canada | [greenhouse](https://job-boards.greenhouse.io/affirm/jobs/8042371003) |
+| 5 | Web Engineer, International Expansion | Robinhood | Toronto, Canada | [greenhouse](https://boards.greenhouse.io/robinhood/jobs/8177444?t=gh_src=&gh_jid=8177444) |
+| 5 | Staff Software Engineer, AI Developer Productivity | Coinbase | Remote - USA | [greenhouse](https://www.coinbase.com/careers/positions/8366842?gh_jid=8366842) |
