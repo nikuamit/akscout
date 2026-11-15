@@ -1,26 +1,26 @@
 # JobScout report for Amit Kumar Sahu
 
-_Generated 2026-11-14 09:45 UTC - 20 jobs_
+_Generated 2026-11-15 10:18 UTC - 20 jobs_
 
 | Score | Title | Company | Location | Link |
 |---|---|---|---|---|
-| 45 | Solutions Architect - Digital Native Business (DNB) | Databricks | Remote - California; San Francisco, California | [greenhouse](https://databricks.com/company/careers/open-positions/job?gh_jid=8938652002) |
-| 45 | (USA) Staff, Data Engineer | Walmart Global Tech | (USA) SUNNYVALE TECH CORNERS BLDG 6 CA SUNNYVALE Home Office | [workday](https://walmart.wd504.myworkdayjobs.com/en-US/WalmartExternal/job/USA-SUNNYVALE-TECH-CORNERS-BLDG-6-CA-SUNNYVALE-Home-Office/XMLNAME--USA--Staff--Data-Engineer_R-2707189-1) |
-| 45 | (USA) Staff, Data Engineer | Walmart Global Tech | (USA) SUNNYVALE TECH CORNERS CA SUNNYVALE Home Office | [workday](https://walmart.wd504.myworkdayjobs.com/en-US/WalmartExternal/job/USA-SUNNYVALE-TECH-CORNERS-CA-SUNNYVALE-Home-Office/XMLNAME--USA--Staff--Data-Engineer_R-2698684) |
-| 45 | (USA) Senior, Data Engineer | Walmart Global Tech | 2 Locations | [workday](https://walmart.wd504.myworkdayjobs.com/en-US/WalmartExternal/job/USA-SUNNYVALE-TECH-CORNERS-BLDG-6-CA-SUNNYVALE-Home-Office/XMLNAME--USA--Senior--Data-Engineer_R-2704948) |
-| 45 | (USA) Staff, Data Engineer | Walmart Global Tech | (USA) SUNNYVALE TECH CORNERS BLDG 6 CA SUNNYVALE Home Office | [workday](https://walmart.wd504.myworkdayjobs.com/en-US/WalmartExternal/job/USA-SUNNYVALE-TECH-CORNERS-BLDG-6-CA-SUNNYVALE-Home-Office/XMLNAME--USA--Staff--Data-Engineer_R-2700902-1) |
-| 45 | (USA) Staff, Data Engineer | Walmart Global Tech | (USA) SUNNYVALE TECH CORNERS BLDG 6 CA SUNNYVALE Home Office | [workday](https://walmart.wd504.myworkdayjobs.com/en-US/WalmartExternal/job/USA-SUNNYVALE-TECH-CORNERS-BLDG-6-CA-SUNNYVALE-Home-Office/XMLNAME--USA--Staff--Data-Engineer_R-2704381-1) |
-| 45 | (USA) Staff, Data Engineer | Walmart Global Tech | (USA) SUNNYVALE TECH CORNERS CA SUNNYVALE Home Office | [workday](https://walmart.wd504.myworkdayjobs.com/en-US/WalmartExternal/job/USA-SUNNYVALE-TECH-CORNERS-CA-SUNNYVALE-Home-Office/XMLNAME--USA--Staff--Data-Engineer_R-2707180-1) |
-| 45 | (USA) Staff, Data Engineer | Walmart Global Tech | (USA) SUNNYVALE TECH CORNERS BLDG 6 CA SUNNYVALE Home Office | [workday](https://walmart.wd504.myworkdayjobs.com/en-US/WalmartExternal/job/USA-SUNNYVALE-TECH-CORNERS-BLDG-6-CA-SUNNYVALE-Home-Office/XMLNAME--USA--Staff--Data-Engineer_R-2701605-1) |
-| 45 | (USA) Staff, Data Engineer | Walmart Global Tech | 2 Locations | [workday](https://walmart.wd504.myworkdayjobs.com/en-US/WalmartExternal/job/USA-SUNNYVALE-TECH-CORNERS-BLDG-6-CA-SUNNYVALE-Home-Office/XMLNAME--USA--Staff--Data-Engineer_R-2704435-1) |
-| 25 | Strategy & Execution Manager - Deal Desk Transformation | Databricks | Mountain View, California; San Francisco, California | [greenhouse](https://databricks.com/company/careers/open-positions/job?gh_jid=8762400002) |
-| 25 | Senior Solutions Architect (Pre-Sales) | MongoDB | Detroit | [greenhouse](https://www.mongodb.com/careers/job/?gh_jid=8314053) |
-| 17 | Principal GTM Operations Analyst | MongoDB | Alberta; British Columbia; Manitoba; Nova Scotia; Ontario; Quebec | [greenhouse](https://www.mongodb.com/careers/job/?gh_jid=8386087) |
-| 17 | Principal GTM Operations Analyst | MongoDB | United States | [greenhouse](https://www.mongodb.com/careers/job/?gh_jid=8335237) |
-| 10 | Data Analyst | Stripe | US | [greenhouse](https://stripe.com/jobs/search?gh_jid=5601881) |
-| 10 | Senior Full Stack Engineer - Experimentation - Product Analytics - NASA - Remote | Grafana Labs | United States (Remote) | [greenhouse](https://job-boards.greenhouse.io/grafanalabs/jobs/6261013004) |
-| 5 | Software Engineer, Vulnerability Management | Stripe | na | [greenhouse](https://stripe.com/jobs/search?gh_jid=8384567) |
-| 5 | Senior GRC Engineer | Brex | San Francisco, California, United States | [greenhouse](https://www.brex.com/careers/8943782002?gh_jid=8943782002) |
-| 5 | Senior GRC Engineer | Brex | Vancouver, British Columbia, Canada | [greenhouse](https://www.brex.com/careers/8943783002?gh_jid=8943783002) |
-| 5 | Senior GRC Engineer | Brex | Seattle, Washington, United States | [greenhouse](https://www.brex.com/careers/8943780002?gh_jid=8943780002) |
-| 5 | Senior GRC Engineer | Brex | New York, New York, United States | [greenhouse](https://www.brex.com/careers/8943620002?gh_jid=8943620002) |
+| 0 | Sr. Product Manager - Visa Spend Clarity | Visa | US - San Francisco, CA | [workday](https://visa.wd5.myworkdayjobs.com/en-US/Visa/job/US---San-Francisco-CA/Sr-Product-Manager---Visa-Spend-Clarity_REF090435W) |
+| 0 | Director Financial Analysis - Deals | Visa | US - Miami, FL | [workday](https://visa.wd5.myworkdayjobs.com/en-US/Visa/job/US---Miami-FL/Director-Financial-Analysis---Deals_REF090234W) |
+| 0 | Contract Recruiter | Visa | 2 Locations | [workday](https://visa.wd5.myworkdayjobs.com/en-US/Visa/job/US---Ashburn-VA/Contract-Recruiter_REF090550W) |
+| 0 | Senior Manager, Editorial Content, Visa.com | Visa | US - San Francisco, CA | [workday](https://visa.wd5.myworkdayjobs.com/en-US/Visa/job/US---San-Francisco-CA/Senior-Manager--Editorial-Content--Visacom_REF090339W) |
+| 0 | IT Audit Manager | Visa | US - Ashburn, VA | [workday](https://visa.wd5.myworkdayjobs.com/en-US/Visa/job/US---Ashburn-VA/IT-Audit-Manager_REF090388W-1) |
+| 0 | Marketing Analyst | Visa | US - Atlanta, GA | [workday](https://visa.wd5.myworkdayjobs.com/en-US/Visa/job/US---Atlanta-GA/Marketing-Analyst_REF090402W) |
+| 0 | Director, VCA, EMF Practice | Visa | US - Miami, FL | [workday](https://visa.wd5.myworkdayjobs.com/en-US/Visa/job/US---Miami-FL/Director--VCA--EMF-Practice_REF090278W) |
+| 0 | Talent Acquisition Partner - 12 Month FTC | Visa | PL - Warsaw, Poland | [workday](https://visa.wd5.myworkdayjobs.com/en-US/Visa/job/PL---Warsaw-Poland/Talent-Acquisition-Partner---12-Month-FTC_REF090468W) |
+| 0 | Senior Manager, Operational Resilience | Visa | PL - Warsaw, Poland | [workday](https://visa.wd5.myworkdayjobs.com/en-US/Visa/job/PL---Warsaw-Poland/Senior-Manager--Operational-Resilience_REF090266W) |
+| 0 | Staff Data Scientist | Visa | US - Bellevue, WA | [workday](https://visa.wd5.myworkdayjobs.com/en-US/Visa/job/US---Bellevue-WA/Staff-Data-Scientist_REF082941W) |
+| 0 | Sr. Manager, Payment Ecosystem Risk & Compliance | Visa | US - Atlanta, GA | [workday](https://visa.wd5.myworkdayjobs.com/en-US/Visa/job/US---Atlanta-GA/Sr-Manager--Payment-Ecosystem-Risk---Compliance_REF089493W) |
+| 0 | Director, Issuing Solutions Sales Executive | Visa | KZ - Almaty, Kazakhstan | [workday](https://visa.wd5.myworkdayjobs.com/en-US/Visa/job/KZ---Almaty-Kazakhstan/Director--Issuing-Solutions-Sales-Executive_REF090367W) |
+| 0 | Security Architect | Visa | GB - London, United Kingdom | [workday](https://visa.wd5.myworkdayjobs.com/en-US/Visa/job/GB---London-United-Kingdom/Security-Architect_REF090384W-1) |
+| 0 | Graphic Designer | Meesho | Bangalore, Karnataka | [lever](https://jobs.lever.co/meesho/6175b1de-5749-4a29-9016-5c387aee5e32) |
+| 0 | Staff Software Engineer (App-Framework) | Databricks | Bengaluru, India | [greenhouse](https://databricks.com/company/careers/open-positions/job?gh_jid=8944097002) |
+| 0 | Customer Success Architect, France | GitLab | Remote, France | [greenhouse](https://job-boards.greenhouse.io/gitlab/jobs/8937803002) |
+| 0 | Customer Success Architect, NEUR | GitLab | Remote, United Kingdom | [greenhouse](https://job-boards.greenhouse.io/gitlab/jobs/8937797002) |
+| 0 | Customer Success Engineer, EMEA | GitLab | Remote, Israel | [greenhouse](https://job-boards.greenhouse.io/gitlab/jobs/8937825002) |
+| 0 | Senior Engagement Manager - Professional Services Sales,  EMEA | GitLab | Remote Ireland; Remote, France; Remote, Germany; Remote, Spain; Remote, United Kingdom | [greenhouse](https://job-boards.greenhouse.io/gitlab/jobs/8937862002) |
+| 0 | Senior Manager, Software Engineering - AI Developer Productivity (Dev Agents and SRE AI) | Samsara | Remote - Canada | [greenhouse](https://www.samsara.com/company/careers/roles/8387002?gh_jid=8387002) |
