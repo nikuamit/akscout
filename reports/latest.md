@@ -1,26 +1,26 @@
 # JobScout report for Amit Kumar Sahu
 
-_Generated 2026-11-18 11:00 UTC - 20 jobs_
+_Generated 2026-11-19 11:02 UTC - 20 jobs_
 
 | Score | Title | Company | Location | Link |
 |---|---|---|---|---|
-| 70 | Senior Data Engineer, Cloudforce One | Cloudflare | Hybrid | [greenhouse](https://boards.greenhouse.io/cloudflare/jobs/8395358?gh_jid=8395358) |
-| 25 | Solutions Architect - Financial Services (Wealth and Asset Management) | Databricks | Massachusetts; New Jersey; New York | [greenhouse](https://databricks.com/company/careers/open-positions/job?gh_jid=8920872002) |
-| 25 | Solutions Architect UAE | Databricks | Dubai, United Arab Emirates | [greenhouse](https://databricks.com/company/careers/open-positions/job?gh_jid=8785294002) |
-| 25 | Senior Solutions Architect | MongoDB | Switzerland; Zurich | [greenhouse](https://www.mongodb.com/careers/job/?gh_jid=8395479) |
-| 15 | Senior Software Engineer, Financial Integrity | Coinbase | Remote - USA | [greenhouse](https://www.coinbase.com/careers/positions/8395582?gh_jid=8395582) |
-| 10 | Technical Operations Engineer, Revenue | Stripe | US | [greenhouse](https://stripe.com/jobs/search?gh_jid=8379544) |
-| 10 | Senior Software Engineer, Backend (Continuous Delivery) | Affirm | Remote Canada | [greenhouse](https://job-boards.greenhouse.io/affirm/jobs/8181193003) |
-| 10 | Senior Software Engineer, Backend (Continuous Delivery) | Affirm | Remote US | [greenhouse](https://job-boards.greenhouse.io/affirm/jobs/8181191003) |
-| 10 | Software Engineer II, Backend | Affirm | Remote Canada | [greenhouse](https://job-boards.greenhouse.io/affirm/jobs/8207671003) |
-| 10 | Solutions Architect | Databricks | Germany; Munich, Germany | [greenhouse](https://databricks.com/company/careers/open-positions/job?gh_jid=8919008002) |
-| 10 | Sr. Solutions Engineer | Databricks | United States | [greenhouse](https://databricks.com/company/careers/open-positions/job?gh_jid=8925851002) |
-| 10 | Backend Engineer (Ruby), AI Engineering: AI Catalog  | GitLab | Remote, United Kingdom | [greenhouse](https://job-boards.greenhouse.io/gitlab/jobs/8940898002) |
-| 5 | Account Executive - Startups, Grower (India) | Stripe | Bangalore | [greenhouse](https://stripe.com/jobs/search?gh_jid=8352487) |
-| 5 | Deal Pricing | Stripe | US-Remote | [greenhouse](https://stripe.com/jobs/search?gh_jid=8387820) |
-| 5 | Enterprise Risk Management (ERM) Program Lead, MALPB | Stripe | US-Remote | [greenhouse](https://stripe.com/jobs/search?gh_jid=7742552) |
-| 5 |  Integration Engineer | Stripe | London | [greenhouse](https://stripe.com/jobs/search?gh_jid=8337955) |
-| 5 | Manager, Software Engineering (Code Standards) | Affirm | Remote Canada | [greenhouse](https://job-boards.greenhouse.io/affirm/jobs/8197744003) |
-| 5 | Manager, Software Engineering (Code Standards) | Affirm | Remote US | [greenhouse](https://job-boards.greenhouse.io/affirm/jobs/8197742003) |
-| 5 | Staff Product Manager, AI | Robinhood | Menlo Park, CA | [greenhouse](https://boards.greenhouse.io/robinhood/jobs/8241579?t=gh_src=&gh_jid=8241579) |
-| 5 | Associate Manager, SOX and Internal Controls | Coinbase | Remote - USA | [greenhouse](https://www.coinbase.com/careers/positions/8394348?gh_jid=8394348) |
+| 45 | (USA) Staff, Data Engineer | Walmart Global Tech | (USA) ISD Office - DGTC AR BENTONVILLE Home Office | [workday](https://walmart.wd504.myworkdayjobs.com/en-US/WalmartExternal/job/USA-ISD-Office---DGTC-AR-BENTONVILLE-Home-Office/XMLNAME--USA--Staff--Data-Engineer_R-2705092-1) |
+| 25 | Accounts Receivable Analyst | Stripe | SEA, NYC | [greenhouse](https://stripe.com/jobs/search?gh_jid=8375966) |
+| 25 | Solutions Architect - Public Sector (Federal Civilian) | Databricks | Maryland; Virginia; Washington, D.C. | [greenhouse](https://databricks.com/company/careers/open-positions/job?gh_jid=8893778002) |
+| 25 | Senior Solutions Architect | MongoDB | Beijing | [greenhouse](https://www.mongodb.com/careers/job/?gh_jid=8399277) |
+| 20 | Senior Designated Support Engineer | Databricks | Sydney, Australia | [greenhouse](https://databricks.com/company/careers/open-positions/job?gh_jid=8740680002) |
+| 20 | Staff Designated Support Engineer | Databricks | Sydney, Australia | [greenhouse](https://databricks.com/company/careers/open-positions/job?gh_jid=8661524002) |
+| 15 | Senior Solutions Architect - DNB Named B2B accounts | Databricks | Central - United States; Northeast - United States; Southeast - United States | [greenhouse](https://databricks.com/company/careers/open-positions/job?gh_jid=8893776002) |
+| 15 | Sr. Solutions Architect - Financial Services (Strategic Banking) | Databricks | Massachusetts; New Jersey; New York; North Carolina; Pennsylvania | [greenhouse](https://databricks.com/company/careers/open-positions/job?gh_jid=8948988002) |
+| 15 | Sr. Solutions Architect - Public Sector (LEAPS)  | Databricks | Maryland; Virginia; Washington, D.C. | [greenhouse](https://databricks.com/company/careers/open-positions/job?gh_jid=8910858002) |
+| 10 | Software Engineer II, Backend | Affirm | Remote Spain | [greenhouse](https://job-boards.greenhouse.io/affirm/jobs/8197317003) |
+| 10 | Software Engineer II, Backend | Affirm | Remote Poland | [greenhouse](https://job-boards.greenhouse.io/affirm/jobs/8197315003) |
+| 10 | Software Engineer II, Backend | Affirm | Remote UK | [greenhouse](https://job-boards.greenhouse.io/affirm/jobs/8201566003) |
+| 10 |  Partner Solutions Architect  | Databricks | Tokyo, Japan | [greenhouse](https://databricks.com/company/careers/open-positions/job?gh_jid=8895479002) |
+| 5 | Payments Performance Strategist, Fraud  | Stripe | San Francisco, CA  | [greenhouse](https://stripe.com/jobs/search?gh_jid=8374754) |
+| 5 | Technical Solutions Engineer | Stripe | Chicago, IL, Seattle, WA | [greenhouse](https://stripe.com/jobs/search?gh_jid=7919030) |
+| 5 | Technical Solutions Engineer | Stripe | Remote - US | [greenhouse](https://stripe.com/jobs/search?gh_jid=7917880) |
+| 5 | Manager, Banking Solutions | Razorpay | Mumbai | [greenhouse](https://job-boards.greenhouse.io/razorpaysoftwareprivatelimited/jobs/4738327005) |
+| 5 | Screening & Transaction Monitoring Associate | Brex | New York, New York, United States | [greenhouse](https://www.brex.com/careers/8950667002?gh_jid=8950667002) |
+| 5 | Screening & Transaction Monitoring Associate | Brex | Seattle, Washington, United States | [greenhouse](https://www.brex.com/careers/8950668002?gh_jid=8950668002) |
+| 5 | Screening & Transaction Monitoring Associate | Brex | San Francisco, California, United States | [greenhouse](https://www.brex.com/careers/8950656002?gh_jid=8950656002) |
