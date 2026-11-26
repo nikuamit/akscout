@@ -1,26 +1,26 @@
 # JobScout report for Amit Kumar Sahu
 
-_Generated 2026-11-25 12:01 UTC - 20 jobs_
+_Generated 2026-11-26 11:50 UTC - 20 jobs_
 
 | Score | Title | Company | Location | Link |
 |---|---|---|---|---|
-| 45 | Data Engineer III | Walmart Global Tech | Bentonville, AR | [workday](https://walmart.wd504.myworkdayjobs.com/en-US/WalmartExternal/job/Bentonville-AR/Data-Engineer-III_R-2705419-1) |
-| 45 | Senior Data Engineer | Walmart Global Tech | Bentonville, AR | [workday](https://walmart.wd504.myworkdayjobs.com/en-US/WalmartExternal/job/Bentonville-AR/Senior-Data-Engineer_R-2705914-1) |
-| 45 | Senior Data Engineer | Walmart Global Tech | Bentonville, AR | [workday](https://walmart.wd504.myworkdayjobs.com/en-US/WalmartExternal/job/Bentonville-AR/Senior-Data-Engineer_R-2709269-1) |
-| 45 | Senior Data Engineer | Walmart Global Tech | Bentonville, AR | [workday](https://walmart.wd504.myworkdayjobs.com/en-US/WalmartExternal/job/Bentonville-AR/Senior-Data-Engineer_R-2705491-1) |
-| 45 | (USA) Principal, Data Engineer | Walmart Global Tech | (USA) SUNNYVALE TECH CORNERS BLDG 6 CA SUNNYVALE Home Office | [workday](https://walmart.wd504.myworkdayjobs.com/en-US/WalmartExternal/job/USA-SUNNYVALE-TECH-CORNERS-BLDG-6-CA-SUNNYVALE-Home-Office/XMLNAME--USA--Principal--Data-Engineer_R-2709364-1) |
-| 30 | Accounting Analyst | Stripe | Bengaluru | [greenhouse](https://stripe.com/jobs/search?gh_jid=8401662) |
-| 30 | Sr. Marketing Ops Manager I | Samsara | Remote - CA; Remote - Chicago; Remote - FL; Remote - Houston; Remote - PA | [greenhouse](https://www.samsara.com/company/careers/roles/8411822?gh_jid=8411822) |
-| 10 | Solutions Architect | Databricks | Denmark | [greenhouse](https://databricks.com/company/careers/open-positions/job?gh_jid=8937362002) |
-| 5 | Account Executive Product, Crypto/Stablecoins | Stripe | SF, NYC | [greenhouse](https://stripe.com/jobs/search?gh_jid=8412983) |
-| 5 | Account Executive, Product Crypto/Stablecoins | Stripe | NYC, SF | [greenhouse](https://stripe.com/jobs/search?gh_jid=8412977) |
-| 5 | Analytics Engineer | Stripe | New York | [greenhouse](https://stripe.com/jobs/search?gh_jid=8415333) |
-| 5 | Infrastructure Engineer, Workflow Engine | Stripe | Seattle, WA  | [greenhouse](https://stripe.com/jobs/search?gh_jid=8414532) |
-| 5 | Lead Software Development Engineer | Razorpay | Bengaluru | [greenhouse](https://job-boards.greenhouse.io/razorpaysoftwareprivatelimited/jobs/4746998005) |
-| 5 | Finance & Strategy Senior Manager | Robinhood | Menlo Park, CA | [greenhouse](https://boards.greenhouse.io/robinhood/jobs/8404511?t=gh_src=&gh_jid=8404511) |
-| 5 | Senior Performance Marketing Manager | Robinhood | Menlo Park, CA; New York, NY | [greenhouse](https://boards.greenhouse.io/robinhood/jobs/8411973?t=gh_src=&gh_jid=8411973) |
-| 5 | Staff Software Engineer, Observability | Robinhood | Menlo Park, CA | [greenhouse](https://boards.greenhouse.io/robinhood/jobs/8412800?t=gh_src=&gh_jid=8412800) |
-| 5 | Site Reliability Engineer - Platform Reliability | Elastic | Spain | [greenhouse](https://jobs.elastic.co/jobs?gh_jid=8176967&gh_jid=8176967) |
-| 5 | Site Reliability Engineer - Platform Reliability | Elastic | Poland | [greenhouse](https://jobs.elastic.co/jobs?gh_jid=8232131&gh_jid=8232131) |
-| 5 | Site Reliability Engineer - Platform Reliability | Elastic | United Kingdom | [greenhouse](https://jobs.elastic.co/jobs?gh_jid=8232039&gh_jid=8232039) |
-| 5 | Site Reliability Engineer - Platform Reliability | Elastic | Ireland | [greenhouse](https://jobs.elastic.co/jobs?gh_jid=8232037&gh_jid=8232037) |
+| 65 | Senior Data Engineer - Data Platform and Automation | Takeda | IND - Bengaluru | [workday](https://takeda.wd502.myworkdayjobs.com/en-US/External/job/IND---Bengaluru/Senior-Data-Engineer---Data-Platform-and-Automation_R0194715) |
+| 40 | Staff Software Engineer, Batch Compute | Stripe | Seattle | [greenhouse](https://stripe.com/jobs/search?gh_jid=8417797) |
+| 30 | Delivery Solutions Architect | Databricks | Mumbai, India | [greenhouse](https://databricks.com/company/careers/open-positions/job?gh_jid=8735814002) |
+| 30 | Marketing Ops Manager I | Samsara | Remote - Calgary; Remote - Montreal; Remote - Toronto | [greenhouse](https://www.samsara.com/company/careers/roles/8417647?gh_jid=8417647) |
+| 30 | Solutions Integration Engineer II | Samsara | Remote - CA; Remote - Chicago; Remote - Seattle; Remote - TX | [greenhouse](https://www.samsara.com/company/careers/roles/8412267?gh_jid=8412267) |
+| 25 | Solutions Architect | Databricks | Singapore | [greenhouse](https://databricks.com/company/careers/open-positions/job?gh_jid=8937350002) |
+| 10 | Finance & Strategy Analyst | Stripe | SEA, SF, NYC, CHI | [greenhouse](https://stripe.com/jobs/search?gh_jid=8397987) |
+| 5 | Operations Insights, Business Partner Analyst | Stripe | South San Francisco, CA | [greenhouse](https://stripe.com/jobs/search?gh_jid=8417785) |
+| 5 | Revenue Operations Senior Analyst | Brex | Vancouver, British Columbia, Canada | [greenhouse](https://www.brex.com/careers/8963009002?gh_jid=8963009002) |
+| 5 | Revenue Operations Senior Analyst | Brex | New York, New York, United States | [greenhouse](https://www.brex.com/careers/8962934002?gh_jid=8962934002) |
+| 5 | Revenue Operations Senior Analyst | Brex | San Francisco, California, United States | [greenhouse](https://www.brex.com/careers/8963004002?gh_jid=8963004002) |
+| 5 | Revenue Operations Senior Analyst | Brex | Seattle, Washington, United States | [greenhouse](https://www.brex.com/careers/8963006002?gh_jid=8963006002) |
+| 5 | Revenue Operations Senior Analyst | Brex | Salt Lake City, Utah, United States | [greenhouse](https://www.brex.com/careers/8963008002?gh_jid=8963008002) |
+| 5 | Security Engineer Intern | Coinbase | Hybrid - New York, NY | [greenhouse](https://www.coinbase.com/careers/positions/8415869?gh_jid=8415869) |
+| 5 | Lakebase Associate Director, Financial Services | Databricks | Remote - New York | [greenhouse](https://databricks.com/company/careers/open-positions/job?gh_jid=8569483002) |
+| 5 | Staff Security Detection Engineer  | Databricks | Mountain View, California; San Francisco, California | [greenhouse](https://databricks.com/company/careers/open-positions/job?gh_jid=8184634002) |
+| 5 | Senior Director, Solutions Architecture & Advisory, Enterprise GTM | Scale AI | San Francisco, CA; New York, NY | [greenhouse](https://job-boards.greenhouse.io/scaleai/jobs/4758383005) |
+| 5 | Senior Growth Marketing Manager (Paid Media) - Self Service Cloud | Elastic | United States | [greenhouse](https://jobs.elastic.co/jobs?gh_jid=8416659&gh_jid=8416659) |
+| 5 | Senior Sales Engineer - Select UK&I | Samsara | Remote - UK | [greenhouse](https://www.samsara.com/company/careers/roles/8417333?gh_jid=8417333) |
+| 5 | Senior Software Engineer II  | Samsara | Bengaluru - BLR1 | [greenhouse](https://www.samsara.com/company/careers/roles/7266569?gh_jid=7266569) |
